@@ -55,7 +55,7 @@
 .fh_bt{ width:34rpx; height: auto; display: block; float: left; margin: 40rpx 0 0 40rpx; }
 .dw_bt{ width:97rpx; height: 97rpx; display: block; float: left; margin: 240rpx 326.5rpx 20rpx; }
 .cs_text{width:100%; height: auto; display: block; float: left; margin: 224rpx auto 0rpx; font-size: 52rpx; line-height: 52rpx; text-align: center; color: #676767; }
-.hqcs_bt {
+button.hqcs_bt {
   width: 48%;
   height: 92rpx;
   display: block;
@@ -65,6 +65,9 @@
   font-size: 32rpx;
   line-height: 92rpx;
   border-radius: 92rpx;
-  border-color: #e4e4e4;
+  border:1px solid #e4e4e4;
   margin: 0 26% 0;
+  content: none;
+}
+button::after {  content: none;
 }
