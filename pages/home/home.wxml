@@ -1,0 +1,39 @@
+<view class="welcome box00 {{showView00?'show':'hide'}}">
+  <image src='./img/bj.jpg' class='welcome_bj' mode="widthFix"></image>
+  <image src='./img/play.png' class='play_bt' mode="widthFix"></image>
+  <button class="weui-btn weblcome_bt " bindtap="goto00">进入圈内</button>
+</view>
+
+
+
+<view class="welcome welcome_box box01  {{showView01?'show':'hide'}}">
+  <text>入圈</text>
+  <text>接下来，希望通过几个问题，了解你更多</text>
+  <text>越了解你，越能为你找到合适的客户，完成销售任务</text>
+  <button class="weui-btn weblcome_bt weblcome_box_bt" bindtap="goto01">继续</button>
+</view>
+
+
+
+
+<view class="welcome welcome_box box02  {{showView02?'show':'hide'}}">
+  <text>你的性别？</text>
+  <text>此数据仅作为调查，共销圈会帮你保密的</text>
+
+  <text>你的出生年月？</text>
+  <text>此数据仅作为调查，共销圈会帮你保密的</text>
+  <button class="weui-btn weblcome_bt weblcome_box_bt" bindtap="goto02">继续</button>
+</view>
+
+
+
+
+<view class="welcome welcome_box box03  {{showView03?'show':'hide'}}">
+  <image src='./img/fh.png' class='fh_bt' mode="widthFix" bindtap="fh_goto03"></image>
+  <text class="cs_text">你所在的城市？</text>
+
+  <image src='./img/dw.png' class='dw_bt'  bindtap="hqcs"></image>
+  <button class="weui-btn hqcs_bt" bindtap="hqcs">获取当前所在城市</button>
+
+  <button class="weui-btn weblcome_bt weblcome_box_bt" bindtap="goto03">继续</button>
+</view>
