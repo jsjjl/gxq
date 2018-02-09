@@ -7,9 +7,11 @@
 
 
 <view class="welcome welcome_box box01  {{showView01?'show':'hide'}}">
-  <text>入圈</text>
-  <text>接下来，希望通过几个问题，了解你更多</text>
-  <text>越了解你，越能为你找到合适的客户，完成销售任务</text>
+  <text class="box01_t1">入圈</text>
+  <text class="clear"></text>
+  <text class="box01_t1t"></text>
+  <text class="box01_t2">接下来，希望通过几个问题，了解你更多</text>
+  <text class="box01_t3">越了解你，越能为你找到合适的客户，完成销售任务</text>
   <button class="weui-btn weblcome_bt weblcome_box_bt" bindtap="goto01">继续</button>
 </view>
 
@@ -17,11 +19,30 @@
 
 
 <view class="welcome welcome_box box02  {{showView02?'show':'hide'}}">
-  <text>你的性别？</text>
-  <text>此数据仅作为调查，共销圈会帮你保密的</text>
+  <text class="box02_t1">你的性别？</text>
+  <text class="box02_t2">此数据仅作为调查，共销圈会帮你保密的</text>
 
-  <text>你的出生年月？</text>
-  <text>此数据仅作为调查，共销圈会帮你保密的</text>
+    <view class="box02_xb">
+       <radio-group bindchange="radioChange">
+                <label class="{{item.checked?'xz':''}}" wx:for="{{radioItems}}" wx:key="value">
+                    <radio class="" value="{{item.value}}" checked="{{item.checked}}"/>
+
+                    <view class="">{{item.name}}</view>
+
+                    <!--<view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
+                        <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+                    </view>-->
+                </label>
+       </radio-group>
+    </view>
+    
+  <text class="box02_t3">你的出生年月？</text>
+  <text class="box02_t4">此数据仅作为调查，共销圈会帮你保密的</text>
+     <view class="box02_cs">
+                    <picker mode="date" value="{{date}}" start="1960-00-00" end="2010-01-01" bindchange="bindDateChange">
+                        <view class="weui-input">{{date}}</view>
+                    </picker>
+     </view>
   <button class="weui-btn weblcome_bt weblcome_box_bt" bindtap="goto02">继续</button>
 </view>
 
@@ -37,3 +58,171 @@
 
   <button class="weui-btn weblcome_bt weblcome_box_bt" bindtap="goto03">继续</button>
 </view>
+
+
+<view class="welcome welcome_box box04  {{showView04?'show':'hide'}}">
+  <image src='./img/fh.png' class='fh_bt' mode="widthFix" bindtap="fh_goto04"></image>
+  <text class="box02_t3">你的销售类别是？</text>
+  <text class="box02_t4 box03_t4">此数据仅作为调查，共销圈会帮你保密的</text>
+
+    <view class="box03_xb">
+       <radio-group bindchange="radioChange_lb">
+                <label class="{{item.checked?'xz':''}}" wx:for="{{radioItems_lb}}" wx:key="value">
+                    <radio class="" value="{{item.value}}" checked="{{item.checked}}"/>
+
+                    <view class="">{{item.name}}</view>
+                </label>
+       </radio-group>
+    </view>
+
+  <button class="weui-btn weblcome_bt weblcome_box_bt" bindtap="goto04">继续</button>
+</view>
+
+
+
+<view class="welcome welcome_box box05  {{showView05?'show':'hide'}}">
+  <image src='./img/fh.png' class='fh_bt' mode="widthFix" bindtap="fh_goto05"></image>
+  <text class="box02_t3 box05_t3">你的销售行业是？</text>
+  <text class="box02_t4 box05_t4">此数据仅作为调查，共销圈会帮你保密的</text>
+
+    <view class="box03_xb">
+       <radio-group bindchange="radioChange_hy">
+                <label class="{{item.checked?'xz':''}}" wx:for="{{radioItems_hy}}" wx:key="value">
+                    <radio class="" value="{{item.value}}" checked="{{item.checked}}"/>
+
+                    <view class="">{{item.name}}</view>
+
+                </label>
+       </radio-group>
+    </view>
+
+  <button class="weui-btn weblcome_bt weblcome_box_bt" bindtap="goto05">继续</button>
+</view>
+
+
+
+<view class="welcome welcome_box box06  {{showView06?'show':'hide'}}">
+ <image src='./img/fh.png' class='fh_bt' mode="widthFix" bindtap="fh_goto06"></image>
+  <text class="box02_t1 box06_t1">你的所在的销售岗位是？</text>
+  <text class="box02_t2 box06_t2">此数据仅作为调查，共销圈会帮你保密的</text>
+
+      <view class="box06_gw">
+                <view>
+                    <picker bindchange="bindAccountChange" value="{{accountIndex}}" range="{{accounts}}">
+                        <view class="">{{accounts[accountIndex]}}</view>
+                    </picker>
+                </view>
+      </view>
+    
+    
+  <text class="box02_t3">你的所从业的时间是？</text>
+  <text class="box02_t4">此数据仅作为调查，共销圈会帮你保密的</text>
+     <view class="box02_xb box06_xb">
+       <radio-group bindchange="radioChange_sj">
+                <label class="{{item.checked?'xz':''}}" wx:for="{{radioItems_sj}}" wx:key="value">
+                    <radio class="" value="{{item.value}}" checked="{{item.checked}}"/>
+
+                    <view class="">{{item.name}}</view>
+
+                </label>
+       </radio-group>
+    </view>
+  <button class="weui-btn weblcome_bt weblcome_box_bt" bindtap="goto06">继续</button>
+</view>
+
+
+
+
+
+<view class="welcome welcome_box box07  {{showView07?'show':'hide'}}">
+ <image src='./img/fh.png' class='fh_bt' mode="widthFix" bindtap="fh_goto07"></image>
+  <text class="box02_t1 box06_t1">最小订单金额是？</text>
+  <text class="box02_t2 box06_t2">此数据仅作为调查，共销圈会帮你保密的</text>
+     <view class="box02_xb box06_xb">
+       <radio-group bindchange="radioChange_zxjr">
+                <label class="{{item.checked?'xz':''}}" wx:for="{{radioItems_zxjr}}" wx:key="value">
+                    <radio class="" value="{{item.value}}" checked="{{item.checked}}"/>
+
+                    <view class="">{{item.name}}</view>
+
+                </label>
+       </radio-group>
+    </view>
+
+    
+  <text class="box02_t3">最大订单金额是？</text>
+  <text class="box02_t4">此数据仅作为调查，共销圈会帮你保密的</text>
+     <view class="box02_xb box06_xb">
+       <radio-group bindchange="radioChange_zdjr">
+                <label class="{{item.checked?'xz':''}}" wx:for="{{radioItems_zdjr}}" wx:key="value">
+                    <radio class="" value="{{item.value}}" checked="{{item.checked}}"/>
+
+                    <view class="">{{item.name}}</view>
+
+                </label>
+       </radio-group>
+    </view>
+  <button class="weui-btn weblcome_bt weblcome_box_bt" bindtap="goto07">继续</button>
+</view>
+
+
+
+<view class="welcome welcome_box box08  {{showView08?'show':'hide'}}">
+ <image src='./img/fh.png' class='fh_bt' mode="widthFix" bindtap="fh_goto08"></image>
+  <text class="box02_t1 box06_t1">最快订单周期是？</text>
+  <text class="box02_t2 box06_t2">此数据仅作为调查，共销圈会帮你保密的</text>
+     <view class="box02_xb box06_xb">
+       <radio-group bindchange="radioChange_zkdd">
+                <label class="{{item.checked?'xz':''}}" wx:for="{{radioItems_zkdd}}" wx:key="value">
+                    <radio class="" value="{{item.value}}" checked="{{item.checked}}"/>
+
+                    <view class="">{{item.name}}</view>
+
+                </label>
+       </radio-group>
+    </view>
+
+    
+  <text class="box02_t3">最长订单周期是？</text>
+  <text class="box02_t4">此数据仅作为调查，共销圈会帮你保密的</text>
+     <view class="box02_xb box06_xb">
+       <radio-group bindchange="radioChange_zcdd">
+                <label class="{{item.checked?'xz':''}}" wx:for="{{radioItems_zcdd}}" wx:key="value">
+                    <radio class="" value="{{item.value}}" checked="{{item.checked}}"/>
+
+                    <view class="">{{item.name}}</view>
+
+                </label>
+       </radio-group>
+    </view>
+  <button class="weui-btn weblcome_bt weblcome_box_bt" bindtap="goto08">继续</button>
+</view>
+
+
+<view class="welcome welcome_box box09  {{showView09?'show':'hide'}}">
+  <view class="index_top">
+    <image src="./img/bj.jpg" class="index_top_tx"></image>
+    <text class="index_top_name">玉兔子</text>
+    <text class="index_top_sf">身份：销售总监</text>
+    <text class="index_top_dj">等级：T5</text>
+    <image src="./img/djjt.png" class="index_top_jt" mode="widthFix"></image>
+  </view>
+
+    <view class="weui-cells weui-cells_after-title index_list">
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">任务一：健身器材高端系列<text>任务时间：2018年1月18号</text></view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">任务二：健身器材高端系列<text>任务时间：2018年1月18号</text></view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">任务三：健身器材高端系列<text>任务时间：2018年1月18号</text></view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+    </view>
+
+</view>
+
+
