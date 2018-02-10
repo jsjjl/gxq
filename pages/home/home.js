@@ -292,6 +292,11 @@ Page({
             showView09: true,
         });
       },
+      gotomy: function() {
+        wx.navigateTo({
+          url: '../my/my'
+        })
+      }
 
 
   

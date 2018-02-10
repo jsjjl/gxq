@@ -1,0 +1,13 @@
+<view class="welcome">
+        <view class="weui-cells weui-cells_after-title">
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd yj_l">普通结算<text>2018-02-15 12:00</text></view>
+                <view class="weui-cell__ft  yj_r">+300<text>交易成功</text></view>
+            </navigator>
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd yj_l">普通结算<text>2018-02-15 12:00</text></view>
+                <view class="weui-cell__ft  yj_r">+300<text>交易成功</text></view>
+            </navigator>
+         
+        </view>
+</view>

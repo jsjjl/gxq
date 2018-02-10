@@ -1,0 +1,6 @@
+.welcome {
+  height:auto;
+  width: 100%;
+  background:#fafafa;
+  display: block; float:left;
+}

@@ -1,0 +1,25 @@
+<view class="welcome welcome_box box09  {{showView09?'show':'hide'}}">
+  <view class="index_top" bindtap="gotomy">
+    <image src="./img/bj.jpg" class="index_top_tx"></image>
+    <text class="index_top_name">玉兔子</text>
+    <text class="index_top_sf">身份：销售总监</text>
+    <text class="index_top_dj">等级：T5</text>
+    <image src="./img/djjt.png" class="index_top_jt" mode="widthFix"></image>
+  </view>
+
+    <view class="weui-cells weui-cells_after-title index_list">
+            <navigator url="../logs/logs" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">任务一：健身器材高端系列<text>任务时间：2018年1月18号</text></view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator url="../logs/logs" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">任务二：健身器材高端系列<text>任务时间：2018年1月18号</text></view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator url="../logs/logs" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">任务三：健身器材高端系列<text>任务时间：2018年1月18号</text></view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+    </view>
+
+</view>

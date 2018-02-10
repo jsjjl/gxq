@@ -1,0 +1,9 @@
+.welcome {
+  height:auto;
+  width: 100%;
+  background:#fafafa;
+  display: block; float:left;
+}
+
+.myedit_img{ width: 80rpx; height: 80rpx; border-radius: 10rpx; display: block; float: right; margin: 10rpx;}
+.myedit_list_right{float:right; text-align:right; width:auto; height:auto; display:block;color:#919191;}

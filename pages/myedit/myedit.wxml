@@ -1,0 +1,158 @@
+<view class="welcome">
+        <view class="weui-cells weui-cells_after-title">
+
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">头像</view>
+                <image src="../img/bj.jpg" class="myedit_img"></image>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+
+
+             <view class="weui-cell  myedit_list">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">姓名</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input myedit_list_right" placeholder="" value="玉兔子"/>
+                </view>
+            </view>
+
+            <view class="weui-cell  myedit_list">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">性别</view>
+                </view>
+                 <view class="weui-cell__bd">
+                    <picker class="weui-input myedit_list_right" bindchange="bindAccountChange" value="{{accountIndex}}" range="{{accounts}}">
+                        <view class="weui-input myedit_list_right">{{accounts[accountIndex]}}</view>
+                    </picker>
+                </view>
+            </view>
+
+            <view class="weui-cell  myedit_list">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">联系方式</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input myedit_list_right" placeholder="" value="158-9658-8541"/>
+                </view>
+            </view>
+
+            <view class="weui-cell  myedit_list">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">出生年月日</view>
+                </view>
+                <view class="weui-cell__bd">
+                     <picker mode="date" value="{{date}}" start="1990-09-01" end="2018-09-01" bindchange="bindDateChange">
+                        <view class="weui-input myedit_list_right">{{date}}</view>
+                    </picker>
+                </view>
+            </view>
+
+            <view class="weui-cell  myedit_list">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">城市</view>
+                </view>
+                 <view class="weui-cell__bd">
+                    <picker class="weui-input myedit_list_right" bindchange="bindcs" value="{{csIndex}}" range="{{cs}}">
+                        <view class="weui-input myedit_list_right">{{cs[csIndex]}}</view>
+                    </picker>
+                </view>
+            </view>
+
+            <view class="weui-cell  myedit_list">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">销售类别</view>
+                </view>
+                 <view class="weui-cell__bd">
+                    <picker class="weui-input myedit_list_right" bindchange="bindlb" value="{{lbIndex}}" range="{{lb}}">
+                        <view class="weui-input myedit_list_right">{{lb[lbIndex]}}</view>
+                    </picker>
+                </view>
+            </view>
+
+             <view class="weui-cell  myedit_list">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">销售行业</view>
+                </view>
+                 <view class="weui-cell__bd">
+                    <picker class="weui-input myedit_list_right" bindchange="bindhy" value="{{hyIndex}}" range="{{hy}}">
+                        <view class="weui-input myedit_list_right">{{hy[hyIndex]}}</view>
+                    </picker>
+                </view>
+            </view>
+
+             <view class="weui-cell  myedit_list">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">销售岗位</view>
+                </view>
+                 <view class="weui-cell__bd">
+                    <picker class="weui-input myedit_list_right" bindchange="bindgw" value="{{gwIndex}}" range="{{gw}}">
+                        <view class="weui-input myedit_list_right">{{gw[gwIndex]}}</view>
+                    </picker>
+                </view>
+            </view>
+
+
+            <view class="weui-cell  myedit_list">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">从业时间</view>
+                </view>
+                 <view class="weui-cell__bd">
+                    <picker class="weui-input myedit_list_right" bindchange="bindsj" value="{{sjIndex}}" range="{{sj}}">
+                        <view class="weui-input myedit_list_right">{{sj[sjIndex]}}</view>
+                    </picker>
+                </view>
+            </view>
+
+
+            <view class="weui-cell  myedit_list">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">最小订单金额</view>
+                </view>
+                 <view class="weui-cell__bd">
+                    <picker class="weui-input myedit_list_right" bindchange="bindzx" value="{{zxIndex}}" range="{{zx}}">
+                        <view class="weui-input myedit_list_right">{{zx[zxIndex]}}</view>
+                    </picker>
+                </view>
+            </view>
+
+            <view class="weui-cell  myedit_list">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">最大订单金额</view>
+                </view>
+                 <view class="weui-cell__bd">
+                    <picker class="weui-input myedit_list_right" bindchange="bindzd" value="{{zdIndex}}" range="{{zd}}">
+                        <view class="weui-input myedit_list_right">{{zd[zdIndex]}}</view>
+                    </picker>
+                </view>
+            </view>
+
+            <view class="weui-cell  myedit_list">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">最快订单时间</view>
+                </view>
+                 <view class="weui-cell__bd">
+                    <picker class="weui-input myedit_list_right" bindchange="bindzk" value="{{zkIndex}}" range="{{zk}}">
+                        <view class="weui-input myedit_list_right">{{zk[zkIndex]}}</view>
+                    </picker>
+                </view>
+            </view>
+
+            <view class="weui-cell  myedit_list">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">最长订单时间</view>
+                </view>
+                 <view class="weui-cell__bd">
+                    <picker class="weui-input myedit_list_right" bindchange="bindzc" value="{{zcIndex}}" range="{{zc}}">
+                        <view class="weui-input myedit_list_right">{{zc[zcIndex]}}</view>
+                    </picker>
+                </view>
+            </view>
+
+
+
+        </view>
+
+        
+
+</view>

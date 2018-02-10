@@ -1,0 +1,29 @@
+.welcome {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.welcome_bj {
+  width: 100%;
+  display: block;
+  float: left;
+  height: auto;
+}
+
+
+
+.index_top{ width: 100%; height: auto; display: block; float: left; background: #3286d4; margin-bottom: 30rpx;}
+.index_top_tx{ width: 140rpx; height: 140rpx; border-radius: 10rpx; display: block; float: left; margin: 40rpx;}
+.index_top_name{ width: 300rpx; font-size: 32rpx; color: #ffffff; height: auto; display: block; float: left; margin: 60rpx 0 0;}
+.index_top_sf{ width: 300rpx; font-size: 28rpx; color: #ffffff; height: auto; display: block; float: left; margin: 5rpx 0 0;}
+.index_top_dj{ width: 130rpx; font-size: 25rpx; color: #ffffff; height: 50rpx; border-radius: 10rpx; border: 1px solid #ffffff; display: block; float: left; line-height: 50rpx; text-align: center; margin:-30rpx 0 0;}
+.index_top_jt{ width: 30rpx; height: auto;  display: block; float: left; margin: -20rpx 0 0 20rpx;}
+
+.index_list{ width: 100%; height: auto; display: block; float: left;}
+.weui-cells:after,.weui-cells:before{border: 0px !important;}
+.index_list .weui-cell__bd{ font-size:30rpx; color: #808080; }
+.index_list .weui-cell__bd text{ font-size:25rpx; margin: 5rpx 0; color: #a1a1a1; width: 100%; display: block; float: left; }

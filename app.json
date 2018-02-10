@@ -1,8 +1,11 @@
 {
   "pages":[
-    "pages/home/home",
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/ptjs/ptjs",
+    "pages/yj/yj",
+    "pages/myedit/myedit", 
+    "pages/my/my", 
+    "pages/home/home", 
+    "pages/rw/rw" 
   ],
   "window":{
     "backgroundTextStyle":"light",

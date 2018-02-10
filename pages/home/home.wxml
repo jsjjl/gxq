@@ -1,6 +1,6 @@
 <view class="welcome box00 {{showView00?'show':'hide'}}">
-  <image src='./img/bj.jpg' class='welcome_bj' mode="widthFix"></image>
-  <image src='./img/play.png' class='play_bt' mode="widthFix"></image>
+  <image src='../img/bj.jpg' class='welcome_bj' mode="widthFix"></image>
+  <image src='../img/play.png' class='play_bt' mode="widthFix"></image>
   <button class="weui-btn weblcome_bt " bindtap="goto00">进入圈内</button>
 </view>
 
@@ -50,10 +50,10 @@
 
 
 <view class="welcome welcome_box box03  {{showView03?'show':'hide'}}">
-  <image src='./img/fh.png' class='fh_bt' mode="widthFix" bindtap="fh_goto03"></image>
+  <image src='../img/fh.png' class='fh_bt' mode="widthFix" bindtap="fh_goto03"></image>
   <text class="cs_text">你所在的城市？</text>
 
-  <image src='./img/dw.png' class='dw_bt'  bindtap="hqcs"></image>
+  <image src='../img/dw.png' class='dw_bt'  bindtap="hqcs"></image>
   <button class="weui-btn hqcs_bt" bindtap="hqcs">获取当前所在城市</button>
 
   <button class="weui-btn weblcome_bt weblcome_box_bt" bindtap="goto03">继续</button>
@@ -61,7 +61,7 @@
 
 
 <view class="welcome welcome_box box04  {{showView04?'show':'hide'}}">
-  <image src='./img/fh.png' class='fh_bt' mode="widthFix" bindtap="fh_goto04"></image>
+  <image src='../img/fh.png' class='fh_bt' mode="widthFix" bindtap="fh_goto04"></image>
   <text class="box02_t3">你的销售类别是？</text>
   <text class="box02_t4 box03_t4">此数据仅作为调查，共销圈会帮你保密的</text>
 
@@ -81,7 +81,7 @@
 
 
 <view class="welcome welcome_box box05  {{showView05?'show':'hide'}}">
-  <image src='./img/fh.png' class='fh_bt' mode="widthFix" bindtap="fh_goto05"></image>
+  <image src='../img/fh.png' class='fh_bt' mode="widthFix" bindtap="fh_goto05"></image>
   <text class="box02_t3 box05_t3">你的销售行业是？</text>
   <text class="box02_t4 box05_t4">此数据仅作为调查，共销圈会帮你保密的</text>
 
@@ -102,7 +102,7 @@
 
 
 <view class="welcome welcome_box box06  {{showView06?'show':'hide'}}">
- <image src='./img/fh.png' class='fh_bt' mode="widthFix" bindtap="fh_goto06"></image>
+ <image src='../img/fh.png' class='fh_bt' mode="widthFix" bindtap="fh_goto06"></image>
   <text class="box02_t1 box06_t1">你的所在的销售岗位是？</text>
   <text class="box02_t2 box06_t2">此数据仅作为调查，共销圈会帮你保密的</text>
 
@@ -135,7 +135,7 @@
 
 
 <view class="welcome welcome_box box07  {{showView07?'show':'hide'}}">
- <image src='./img/fh.png' class='fh_bt' mode="widthFix" bindtap="fh_goto07"></image>
+ <image src='../img/fh.png' class='fh_bt' mode="widthFix" bindtap="fh_goto07"></image>
   <text class="box02_t1 box06_t1">最小订单金额是？</text>
   <text class="box02_t2 box06_t2">此数据仅作为调查，共销圈会帮你保密的</text>
      <view class="box02_xb box06_xb">
@@ -168,7 +168,7 @@
 
 
 <view class="welcome welcome_box box08  {{showView08?'show':'hide'}}">
- <image src='./img/fh.png' class='fh_bt' mode="widthFix" bindtap="fh_goto08"></image>
+ <image src='../img/fh.png' class='fh_bt' mode="widthFix" bindtap="fh_goto08"></image>
   <text class="box02_t1 box06_t1">最快订单周期是？</text>
   <text class="box02_t2 box06_t2">此数据仅作为调查，共销圈会帮你保密的</text>
      <view class="box02_xb box06_xb">
@@ -200,24 +200,24 @@
 
 
 <view class="welcome welcome_box box09  {{showView09?'show':'hide'}}">
-  <view class="index_top">
-    <image src="./img/bj.jpg" class="index_top_tx"></image>
+  <view class="index_top" bindtap="gotomy">
+    <image src="../img/bj.jpg" class="index_top_tx"></image>
     <text class="index_top_name">玉兔子</text>
     <text class="index_top_sf">身份：销售总监</text>
     <text class="index_top_dj">等级：T5</text>
-    <image src="./img/djjt.png" class="index_top_jt" mode="widthFix"></image>
+    <image src="../img/djjt.png" class="index_top_jt" mode="widthFix"></image>
   </view>
 
     <view class="weui-cells weui-cells_after-title index_list">
-            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <navigator url="../rw/rw" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
                 <view class="weui-cell__bd">任务一：健身器材高端系列<text>任务时间：2018年1月18号</text></view>
                 <view class="weui-cell__ft weui-cell__ft_in-access"></view>
             </navigator>
-            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <navigator url="../rw/rw" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
                 <view class="weui-cell__bd">任务二：健身器材高端系列<text>任务时间：2018年1月18号</text></view>
                 <view class="weui-cell__ft weui-cell__ft_in-access"></view>
             </navigator>
-            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+            <navigator url="../rw/rw" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
                 <view class="weui-cell__bd">任务三：健身器材高端系列<text>任务时间：2018年1月18号</text></view>
                 <view class="weui-cell__ft weui-cell__ft_in-access"></view>
             </navigator>
