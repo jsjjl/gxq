@@ -1,0 +1,10 @@
+<view class="welcome">
+ <table class="table_box">
+ <tr><td>产品名称</td><td>目录价</td><td>建议成交价</td><td>产品底价</td></tr>
+ <tr><td>A系列集成</td><td>100万</td><td>80万</td><td>65万</td></tr>
+ <tr><td>A系列集成</td><td>100万</td><td>80万</td><td>65万</td></tr>
+ <tr><td>A系列集成</td><td>100万</td><td>80万</td><td>65万</td></tr>
+ <tr><td>A系列集成</td><td>100万</td><td>80万</td><td>65万</td></tr>
+ <tr><td>A系列集成</td><td>100万</td><td>80万</td><td>65万</td></tr>
+ </table>
+</view>

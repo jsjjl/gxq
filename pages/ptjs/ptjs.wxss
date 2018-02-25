@@ -1,6 +1,68 @@
 .welcome {
   height:auto;
   width: 100%;
-  background:#fafafa;
+  background:#ffffff;
   display: block; float:left;
 }
+
+page,
+.page,
+.page__bd{
+    height: 100%;
+}
+.page__bd{
+    padding-bottom: 0;
+}
+.weui-tab__content{
+    padding-top: 60px;
+    text-align: center;
+}
+
+.weui-navbar__slider {
+  background-color:#000000;
+  left:0px !important;
+  width:50%;
+}
+
+.weui-navbar__item.weui-bar__item_on {
+color:#000000;
+}
+
+.weui-navbar{
+  border-bottom: .75rem solid #fafafa;
+
+  width: 100%;
+}
+
+.weui-tab__content {
+  padding-top:1rem;
+  text-align:left;
+  display: block;
+  }
+  .weui-cells_after-title,.weui-cell,.weui-tab__content,.weui-tab__panel,.weui-cells:before {
+    border-top:0px;
+  }
+
+  .weui-cells:after {
+    border-bottom: 0px;
+  }
+  .weui-cell:before {
+  color:#f5f5f5;
+  border-color: #f5f5f5;
+  }
+  .weui-cell__ft {
+  color:#000000;
+  }
+
+  .weui-cell {
+  padding:15px 15px;
+  }
+
+  .zjdt_box{ width: 14.5rem; display: block; float: none; margin: 2rem auto 1rem;}
+
+  .zjdt_box em{ width: 1.5rem; height: 1.5rem; display: block; float: left; border-radius: 1.5rem; background: #BCBCBC; color: #ffffff; text-align: center; line-height: 1.5rem; font-size:.8rem;}
+  .zjdt_box em.active, .zjdt_box span.active{ background: #FFCC01;}
+  .zjdt_box span{ background: #BCBCBC; width: 5rem; height: .2rem; margin: .7rem 0 0; display: block; float: left;}
+
+  .zjdt_text{ width: 100%; height:auto; display: block; float: left; font-size: .8rem; margin-top:.5rem;}
+  .zjdt_text span{ width: 33.33333%; height: auto; display: block; float: left; text-align: center;}

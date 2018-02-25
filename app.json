@@ -1,5 +1,9 @@
 {
   "pages":[
+    "pages/khxq/khxq",
+    "pages/pass/pass",
+    "pages/cpml/cpml",
+    "pages/rwxq/rwxq",
     "pages/ptjs/ptjs",
     "pages/yj/yj",
     "pages/myedit/myedit", 

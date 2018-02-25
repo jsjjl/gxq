@@ -1,0 +1,13 @@
+<view class="welcome">
+<view class="kf"><image src="../img/kf.png" class="kf_img"></image></view>
+                    <view class="weui-cells weui-cells_after-title">
+                        <view class="weui-cell">
+                            <view class="weui-cell__bd">客户名称</view>
+                            <view class="weui-cell__ft">深圳万科地产万科红项目部</view>
+                        </view>
+                        <view class="weui-cell">
+                            <view class="weui-cell__bd">对接情况</view>
+                            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+                        </view>
+                    </view>
+</view>

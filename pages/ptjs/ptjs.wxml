@@ -1,3 +1,59 @@
 <view class="welcome">
-        
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-tab">
+            <view class="weui-navbar">
+                <block wx:for="{{tabs}}" wx:key="*this">
+                    <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+                        <view class="weui-navbar__title">{{item}}</view>
+                    </view>
+                </block>
+                <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+            </view>
+            <view class="weui-tab__panel">
+                <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+                    <view class="weui-cells weui-cells_after-title">
+                        <view class="weui-cell">
+                            <view class="weui-cell__bd">订单号</view>
+                            <view class="weui-cell__ft">180040000554</view>
+                        </view>
+                        <view class="weui-cell">
+                            <view class="weui-cell__bd">交易名称</view>
+                            <view class="weui-cell__ft">普通结算</view>
+                        </view>
+                        <view class="weui-cell">
+                            <view class="weui-cell__bd">收款账户</view>
+                            <view class="weui-cell__ft">622226******0078</view>
+                        </view>
+                        <view class="weui-cell">
+                            <view class="weui-cell__bd">交易时间</view>
+                            <view class="weui-cell__ft">2018-01-12  10:12:37</view>
+                        </view>
+                        <view class="weui-cell">
+                            <view class="weui-cell__bd">金额</view>
+                            <view class="weui-cell__ft">+300</view>
+                        </view>
+                        <view class="weui-cell">
+                            <view class="weui-cell__bd">付款账户</view>
+                            <view class="weui-cell__ft">155****0909</view>
+                        </view>
+                        <view class="weui-cell">
+                            <view class="weui-cell__bd">支付方式</view>
+                            <view class="weui-cell__ft">微信支付</view>
+                        </view>
+                    </view>
+                </view>
+                
+                <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+                <p class="zjdt_box"><em class="active">1</em><span class="active"></span><em>2</em><span></span><em>3</em></p>
+                <p class="zjdt_text">
+                <span class="ell zjdt_text1">交易成功</span>
+                <span class="ell zjdt_text2">银行已受理</span>
+                <span class="ell zjdt_text3">银行已受理，请稍等</span>
+                </p>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
 </view>

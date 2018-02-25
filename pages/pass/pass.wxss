@@ -1,0 +1,13 @@
+.welcome {
+  height:auto;
+  width: 100%;
+  background:#ffffff;
+  display: block; float:left;
+}
+
+.table_box{ width: 100%; overflow: hidden; height: auto;display: block; float: left; margin: 0 0; }
+.table_box tr{ width: 105%; height:3rem;display: block; float: left; line-height: 3rem; border-bottom: 1px solid #eeeeee; text-align: center
+  ; color: #777777;}
+.table_box tr td{ width: 19.333%; height: 3rem;display: block; float: left; font-size: .8rem; line-height: 3rem; border-left: 1px solid #eeeeee; }
+.table_box tr td:nth-child(1){  border: 0px; }
+

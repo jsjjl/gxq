@@ -1,0 +1,97 @@
+.welcome {
+  height:auto;
+  width: 100%;
+  background:#ffffff;
+  display: block; float:left;
+}
+
+page,
+.page,
+.page__bd{
+    height: 100%;
+}
+.page__bd{
+    padding-bottom: 0;
+}
+.weui-tab__content{
+    padding-top: 60px;
+    text-align: center;
+}
+
+.weui-navbar__slider {
+  background-color:#000000;
+  left:0px !important;
+  width:50%;
+}
+
+.weui-navbar__item.weui-bar__item_on {
+color:#000000;
+}
+
+.weui-navbar{
+  border-bottom: .75rem solid #fafafa;
+
+  width: 100%;
+}
+
+.weui-tab__content {
+  padding-top:1rem;
+  text-align:left;
+  display: block;
+  }
+  .weui-cells_after-title,.weui-cell,.weui-tab__content,.weui-tab__panel,.weui-cells:before {
+    border-top:0px;
+  }
+
+  .weui-cells:after {
+    border-bottom: 0px;
+  }
+  .weui-cell:before {
+  color:#f5f5f5;
+  border-color: #f5f5f5;
+  }
+  .weui-cell__ft {
+ 
+  }
+
+  .weui-cell {
+  padding:15px 15px;
+  }
+
+  .zjdt_box{ width: 14.5rem; display: block; float: none; margin: 2rem auto 1rem;}
+
+  .zjdt_box em{ width: 1.5rem; height: 1.5rem; display: block; float: left; border-radius: 1.5rem; background: #BCBCBC; color: #ffffff; text-align: center; line-height: 1.5rem; font-size:.8rem;}
+  .zjdt_box em.active, .zjdt_box span.active{ background: #FFCC01;}
+  .zjdt_box span{ background: #BCBCBC; width: 5rem; height: .2rem; margin: .7rem 0 0; display: block; float: left;}
+
+  .zjdt_text{ width: 100%; height:auto; display: block; float: left; font-size: .8rem; margin-top:.5rem;}
+  .zjdt_text span{ width: 33.33333%; height: auto; display: block; float: left; text-align: center;}
+
+.my_title{ width:100%; height:80rpx; margin-top:2rem; border-bottom:1rpx solid #f5f5f5; display:block;float:left; background: #ffffff; }
+.my_title_img{ width:40rpx; height:40rpx; margin:20rpx; display:block;float:left;}
+.my_title_text{ width:auto; height:40rpx; margin:20rpx 0; line-height:40rpx; font-size:26rpx; display:block;float:left;color: #3286d4; }
+
+.my_sp{width:92%; height:180rpx; overflow:hidden; margin:5rpx 4%; display:block;float:left; position:relative; background: #ffffff; }
+.my_sp_img{width:100%; height:100%;display:block;float:left; position:absolute; z-index:1;}
+.my_sp_play{width:70rpx; height:70rpx;display:block;float:left; position:absolute; z-index:2; top:18%; left:50%; margin-left:-35rpx;}
+.my_sp_text{width:80%; height:auto;display:block;float:left; position:absolute; z-index:3; bottom:10%; left:10%; font-size:26rpx; color:#ffffff;    text-align: center;}
+
+.my_sp_more{width:100%; height:50rpx; line-height:50rpx; border-top:1px solid #D8D8D8; display:block;float:left;font-size:26rpx; color:#555555;    text-align: center; margin:0rpx 0 30rpx;}
+.tjt{width:30rpx; height:30rpx; margin:25rpx; display:block;float:right;}
+.weui-cells__title {
+color:#000000; font-size:.7rem; border-bottom: 1px solid #f5f5f5; width:85%;
+margin-left:2%;
+margin-bottom:.3rem; padding-bottom:.5rem;
+}
+
+
+.table_box{ width: 100%; margin-bottom: 3.5rem; height: auto;display: block; float: left; margin: 0 0; border-collapse: collapse; overflow: hidden;}
+.table_box tr{ width: 105%; height:3rem;display: block; float: left; line-height: 3rem; border-bottom: 1px solid #eeeeee; text-align: center
+  ; color: #777777;}
+.table_box tr td{ width: 19%; height: 3rem;display: block; font-size: .8rem; float: left; line-height: 3rem; border-collapse: collapse; border-left: 1px solid #eeeeee; }
+.table_box tr td:nth-child(1){  border: 0px; }
+.table_box tr:nth-child(1) td{ color: #000000;height: 2rem;line-height: 2rem;}
+.table_box tr:nth-child(1){height: 2rem;line-height: 2rem;}
+.table_box em{ width:.3rem; height: .3rem; border-radius: .3rem; background: #FF1010; display: inline-block; margin-right:.1rem; }
+
+.pass_bt{ width: 100%; height: 3rem; background: #3286D4; text-align: center; line-height: 3rem; color: #ffffff; font-size: 1rem; position: fixed; left: 0; bottom: 0; z-index: 99;}
