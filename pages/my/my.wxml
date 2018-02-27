@@ -25,11 +25,11 @@
     </view>
      <text class="my_sp_more">查看更多</text>
 
-     <view class="my_title" bindtap="gotoyj">
+     <navigator class="my_title" url="../yj/yj" >
         <image src="../img/yj.png" class="my_title_img"></image>
         <text class="my_title_text">佣金</text>
         <image src="../img/tjt.png" class="tjt"></image>
-    </view>
+    </navigator>
 
 
 </view>

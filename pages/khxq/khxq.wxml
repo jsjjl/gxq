@@ -1,5 +1,7 @@
 <view class="welcome">
-<view class="kf"><image src="../img/kf.png" class="kf_img"></image></view>
+
+<navigator class="kf" url="../xx/xx"><image src="../img/kf.png" class="kf_img"></image></navigator>
+
                     <view class="weui-cells weui-cells_after-title">
                         <view class="weui-cell">
                             <view class="weui-cell__bd">客户名称</view>
@@ -9,5 +11,53 @@
                             <view class="weui-cell__bd">对接情况</view>
                             <view class="weui-cell__ft weui-cell__ft_in-access"></view>
                         </view>
+                        <view class="lbiao"><span  class="lbiaot">客户</span><span class="lbiaot lbiaot2">对接</span>
+                        <span  class="lbiaof">张三<em>155-5555-9999</em><br/>总经理<em>一级</em></span><span class="lbiaof lbiaof2">张三<em>155-5555-9999</em><br/>副总经理<em>T9</em></span>
+                        </view>
+
+                        <view class="weui-cell">
+                            <view class="weui-cell__bd">客户需求</view>
+                            <view class="weui-cell__ft">十台服务器</view>
+                        </view>
+
+                        <view class="weui-cell">
+                            <view class="weui-cell__bd">商机额</view>
+                            <view class="weui-cell__ft">100万</view>
+                        </view>
+
+                        <view class="weui-cell">
+                            <view class="weui-cell__bd">主要货品</view>
+                            <view class="weui-cell__ft">深信服</view>
+                        </view>
+
+                        <view class="weui-cell">
+                            <view class="weui-cell__bd">客户来源</view>
+                            <view class="weui-cell__ft">平台提供</view>
+                        </view>
+
+                        <view class="weui-cell weui-cell2">
+                            <view class="weui-cell__bd">城市</view>
+                            <view class="weui-cell__ft">深圳</view>
+                        </view>
+
+                        <em class="df"></em>
+
+                        <view class="weui-cell weui-cell2">
+                            <view class="weui-cell__bd">状态</view>
+                            <view class="weui-cell__ft">跟踪</view>
+                        </view>
+
+                        <view class="weui-cell weui-cell2">
+                                <view class="weui-cell__bd">成单周期</view>
+                                <view class="weui-cell__ft">2周</view>
+                            </view>
+    
+                            <em class="df"></em>
+    
+                            <view class="weui-cell weui-cell2">
+                                <view class="weui-cell__bd">胜率</view>
+                                <view class="weui-cell__ft">60%</view>
+                            </view>
+
                     </view>
 </view>

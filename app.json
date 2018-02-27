@@ -1,5 +1,8 @@
 {
   "pages":[
+    "pages/home/home",
+    "pages/rw/rw",
+    "pages/xx/xx",
     "pages/khxq/khxq",
     "pages/pass/pass",
     "pages/cpml/cpml",
@@ -7,9 +10,7 @@
     "pages/ptjs/ptjs",
     "pages/yj/yj",
     "pages/myedit/myedit", 
-    "pages/my/my", 
-    "pages/home/home", 
-    "pages/rw/rw" 
+    "pages/my/my"
   ],
   "window":{
     "backgroundTextStyle":"light",

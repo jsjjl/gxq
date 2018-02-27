@@ -23,5 +23,11 @@ Page({
             sliderOffset: e.currentTarget.offsetLeft,
             activeIndex: e.currentTarget.id
         });
-    }
+    },
+    gotokh: function() {
+        wx.navigateTo({
+          url: '../khxq/khxq'
+        })
+      }
+    
 });

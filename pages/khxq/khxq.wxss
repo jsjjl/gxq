@@ -3,6 +3,7 @@
   width: 100%;
   background:#ffffff;
   display: block; float:left;
+   margin-bottom: 3.5rem;
 }
 
 .table_box{ width: 100%; overflow: hidden; height: auto;display: block; float: left; margin: 0 0; }
@@ -31,6 +32,18 @@ border-color: #f5f5f5;
 padding:15px 15px;
 }
 
-.kf{ width: 3rem; height: 3rem; display: block; float: left; background: #3286D4; border-radius: 3rem; position: fixed; left: 1rem; bottom: 1rem;}
+.kf{ width: 3rem; height: 3rem; display: block; float: left; background: #3286D4; border-radius: 3rem; position: fixed; left: 1rem; bottom: 1rem; z-index:9999;}
 .kf_img{ width: 100%; height: 100%; display: block;float: left;}
+.lbiao{border:1px solid #eeeeee; border-bottom:0px; margin:15px 5%;display:block; float:left; width: 90%;}
+.lbiaot{width:50%; margin-right: -1px; text-align: center; border:1px solid #eeeeee;border-top:0px;border-left:0px; height:50px; line-height:50px;color:#000000; display:block; float:left;font-size:16px;}
+.lbiaot2{border-right: 0px;}
+
+.lbiaof{width:46%; margin-right: -1px; text-align: left; border:1px solid #eeeeee;border-top:0px;border-left:0px; height:50px; line-height:25px;color:#aaaaaa; display:block; float:left;font-size:14px; padding: 10px 2%;}
+.lbiaof2{border-right: 0px;}
+.lbiaof em{ display: block; float: right; text-align: right;}
+
+.weui-cell2{ width: 40%; display: block; float: left; border-bottom: 1px solid #f5f5f5; padding:15px 0; margin:0 15px;}
+.weui-cell2 .weui-cell__bd{ width: 50%;display: block; float: left; }
+.df{ width: 1px; height: 18px; margin: 18px 0 0 7px; border-left: 2px solid #f5f5f5;display: block; float: left; }
+
 

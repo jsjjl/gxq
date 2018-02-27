@@ -200,7 +200,7 @@
 
 
 <view class="welcome welcome_box box09  {{showView09?'show':'hide'}}">
-  <view class="index_top" bindtap="gotomy">
+  <view class="index_top" bindtap="gotorw">
     <image src="../img/bj.jpg" class="index_top_tx"></image>
     <text class="index_top_name">玉兔子</text>
     <text class="index_top_sf">身份：销售总监</text>

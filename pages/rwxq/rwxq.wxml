@@ -30,10 +30,10 @@
 
 
                     <view class="weui-cells weui-cells_after-title">
-                        <view class="weui-cell">
-                            <view class="weui-cell__bd">产品目录价</view>
+                        <navigator class="weui-cell" url="../cpml/cpml" >
+                            <view class="weui-cell__bd" >产品目录价</view>
                             <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                        </view>
+                        </navigator>
                         <view class="weui-cell">
                             <view class="weui-cell__bd">底价佣金</view>
                             <view class="weui-cell__ft">6%</view>
@@ -60,49 +60,50 @@
                 
                 <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
                      <table class="table_box">
-                        <tr><td>线索(6)</td><td>触及(8)</td><td>跟踪(3)</td><td>成单(6)</td><td>售后(5)</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
-                        <tr><td><em></em>客户一</td><td>客户二</td><td>客户三</td><td>客户四</td><td>客户五</td></tr>
+                        <tr> <td >线索(6)</td> <td >触及(8)</td> <td >跟踪(3)</td> <td >成单(6)</td> <td >售后(5)</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
+                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
                      </table>
-                     <view class="pass_bt">PASS客户</view>
+                     
+                     <navigator url="../pass/pass" class="pass_bt">PASS客户</navigator>
                 </view>
             </view>
         </view>

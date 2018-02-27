@@ -6,7 +6,7 @@ const app = getApp()
 Page({
 
       data: {
-        showView00: false,
+        showView00: true,
         showView01: false,
         showView02: false,
         showView03: false,
@@ -15,7 +15,7 @@ Page({
         showView06: false,
         showView07: false,
         showView08: false,
-        showView09: true,
+        showView09: false,
         radioItems: [
           {name: '男', value: '男'},
           {name: '女', value: '女', checked: true}
@@ -292,9 +292,9 @@ Page({
             showView09: true,
         });
       },
-      gotomy: function() {
+      gotorw: function() {
         wx.navigateTo({
-          url: '../my/my'
+          url: '../rw/rw'
         })
       }
 

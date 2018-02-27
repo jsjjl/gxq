@@ -1,13 +1,13 @@
-//logs.js
-const util = require('../../utils/util.js')
+const app = getApp();
 
 Page({
   data: {
 
   },
+
   gotomy: function() {
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '../my/my'
     })
   }
 })
