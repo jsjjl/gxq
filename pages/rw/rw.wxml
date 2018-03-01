@@ -1,9 +1,9 @@
 <view class="welcome welcome_box box09">
   <view class="index_top" bindtap="gotomy">
-    <image src="../img/bj.jpg" class="index_top_tx"></image>
-    <text class="index_top_name">玉兔子</text>
-    <text class="index_top_sf">身份：销售总监</text>
-    <text class="index_top_dj">等级：T5</text>
+    <image src="{{userInfo.avatarUrl}}" class="index_top_tx"></image>
+    <text class="index_top_name">{{userInfo.nickName}}</text>
+    <text class="index_top_sf">身份：{{sf}}</text>
+    <text class="index_top_dj">等级：{{dj}}</text>
     <image src="../img/djjt.png" class="index_top_jt" mode="widthFix"></image>
   </view>
 
@@ -23,3 +23,8 @@
     </view>
 
 </view>
+
+
+
+<!-- <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname"></text> -->

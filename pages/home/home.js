@@ -2,13 +2,16 @@
 //获取应用实例
 const app = getApp()
 
-
+const home_config = require('../../config').home_config;
+var code; 
+var nickName;
+var avatarUrl;
 Page({
 
       data: {
-        showView00: true,
+        showView00: false,
         showView01: false,
-        showView02: false,
+        showView02: true,
         showView03: false,
         showView04: false,
         showView05: false,
@@ -296,6 +299,100 @@ Page({
         wx.navigateTo({
           url: '../rw/rw'
         })
+      },
+
+      /**
+       * 生命周期函数--监听页面加载
+       */
+      onLoad: function (options) { 
+        var that = this;
+        //that.getHomeConfigMethod();
+
+        //调用应用实例的方法获取全局数据  
+        that.getUserInfo();
+        
+
+      },
+      // getHomeConfigMethod:function(){
+      //   var that = this;
+      //   wx.request({
+      //     url: home_config+"?token=toekn", 
+      //     success:function(res){
+      //         console.log(res.data.datas.user_openid);
+      //     },
+      //     fail:function(res){
+      //         console.log(res.data.msg)
+      //     }
+      //  })
+      // },
+
+      
+     
+      getUserInfo:function(){ 
+        var that = this;  
+
+        wx.login({
+          success: function(res) {
+            if (res.code) {
+                code = res.code
+                console.log(code);
+                wx.getUserInfo({  
+                   success: function (res) {
+                          nickName = res.userInfo.nickName;
+                          avatarUrl = res.userInfo.avatarUrl;
+                          console.log(nickName);
+                          console.log(avatarUrl);
+
+                          wx.request({
+                            url: 'http://101.132.105.206:18080/yj_gxq/WX/loginByWX',
+                            
+                            data: {
+                              code: code,
+                              nickName:nickName,
+                              avatarUrl:avatarUrl
+                            },
+                            
+                            success:function(res){
+                              
+                                  console.log(res.data);
+                              },
+                              fail:function(res){
+                                  console.log(res.data.msg)
+                            }
+                          });
+
+                        }  
+                   });
+                
+                  
+
+            } else {
+              console.log('获取用户登录态失败！' + res.errMsg)
+            }
+          }
+        });
+
+   
+          // //调用登录接口  
+          // wx.login({  
+          //   success: function () {  
+          //     wx.getUserInfo({  
+          //       success: function (res) {
+          //         nickName = res.userInfo.nickName;
+          //         avatarUrl = res.userInfo.avatarUrl;
+          //         console.log(res.userInfo.code);
+          //         console.log(nickName);
+          //         console.log(avatarUrl);
+          //       }  
+          //     })  
+          //   }  
+          // }); 
+          
+          
+      
+      },  
+      globalData:{  
+        userInfo:null  
       }
 
 
