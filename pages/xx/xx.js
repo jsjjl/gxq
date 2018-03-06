@@ -17,7 +17,7 @@ Page({
     scrollTop: 0,
     message: '',
     text: text,
-    centendata: '',
+    centendata: [],
     nickName: '',
     avatarUrl: '',
     news_input_val:'',
@@ -89,15 +89,15 @@ Page({
   },
 
   onLoad: function (options) {
-    openid_talk = options.openid_talk;
-    zx_info_id = options.zx_info_id;
-    console.log(openid_talk)
+    // openid_talk = options.openid_talk;
+    // zx_info_id = options.zx_info_id;
+    // console.log(openid_talk)
     //调用应用实例的方法获取全局数据
-    this.setData({
-      zx_info_id: zx_info_id,
-      nickName: app.nickName,
-      avatarUrl: app.avatarUrl,
-    });
+    // this.setData({
+    //   zx_info_id: zx_info_id,
+    //   nickName: app.nickName,
+    //   avatarUrl: app.avatarUrl,
+    // });
     this.loaddata()
   },
   // 页面加载
@@ -117,11 +117,18 @@ Page({
         
         success:function(res){ 
                 if (res.data.state == 0) {
-                    console.log("12323:",res.data.data.contentVo);
+                    
+
+                    var date = res.data.data[0].contentVo;
+
                     that.setData({
-                            // tabdata: res.data.k1,
-                            centendata: res.data.data.contentVo
-                          })
+
+                      　　　　　 centendata: date
+                       
+                    })
+                    console.log("12323:",date);
+
+                   
                   } else {
                     wx.showToast({
                       title: res.data.msg,
@@ -161,12 +168,12 @@ Page({
     //     }, 500);
     //   }
     // })
-    setTimeout(function () {
-      if (that.data.centendata.length != length) {
-        length = that.data.centendata.length
-      }
-      that.loaddata()
-    }, 3000);
+    // setTimeout(function () {
+    //   if (that.data.centendata.length != length) {
+    //     length = that.data.centendata.length
+    //   }
+    //   that.loaddata()
+    // }, 3000);
     
   },
   // 获取hei的id节点然后屏幕焦点调转到这个节点

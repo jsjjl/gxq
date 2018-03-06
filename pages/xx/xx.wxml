@@ -10,45 +10,40 @@
   </view>
 </view> -->
 <view class='news'>
-  <view class='xiahuaxian1 xiahuaxia'></view>
+  <!-- <view class='xiahuaxian1 xiahuaxia'></view> -->
   <!-- <view class='new_top_txt'>您正在与{{tabdata.nickname}}进行沟通</view> -->
   <view class="historycon">
 
 
+
+
     <scroll-view scroll-y="true" scroll-top="{{scrollTop}}" class="history" wx:for="{{centendata}}" wx:key=''>
 
-      <!-- <view>
-        <text class='time'>{{item.time}}</text>
-      </view> -->
-
+    
       <block wx:if="{{item.messageType == 1}}">
         <view class='my_right'>
           <view class='page_row'>
-            <text wx:if='{{!item.headUrl}}' class='new_txt'>{{item.content}}</text>
-            <image wx:if='{{item.headUrl}}' src='{{item.content}}' class='new_imgtent'></image>
-            <view wx:if='{{!item.headUrl}}' class='sanjiao my'></view>
-            <image class='new_img' wx:if='{{item.show_rignt == "是自己的内容，显示在右边，右边渲染 nickname_owner，head_owner"}}' src='{{item.head_owner}}'></image>
-             <image class='new_img' wx:if='{{item.show_rignt == "是自己的内容，显示在右边，右边渲染 nickname_open，head_open"}}' src='{{item.head_open}}'></image>
+           <image wx:if='{{item.headUrl}}' src='{{item.headUrl}}' class='new_imgtent'></image>
+            <text  class='new_txt'>{{item.content}}</text>
+           
           </view>
         </view>
       </block>
       <block wx:else>
         <view class='you_left'>
           <view class='page_row'>
-            <image class='new_img' wx:if='{{item.show_rignt == "不是自己的内容，显示在左边，左边渲染 nickname_owner，head_owner"}}' src='{{item.head_owner}}'></image>
-             <image class='new_img' wx:if='{{item.show_rignt == "不是自己的内容，显示在左边，左边渲染 nickname_open，head_open"}}' src='{{item.head_open}}'></image>
-            <view wx:if='{{!item.headUrl}}' class='sanjiao you'></view>
-            <text wx:if='{{!item.headUrl}}' class='new_txt'>{{item.content}}</text>
-            <image wx:if='{{item.headUrl}}' src='{{item.content}}' class='new_imgtent'></image>
+             <image wx:if='{{item.headUrl}}' src='{{item.headUrl}}' class='new_imgtent'></image>
+            <text  class='new_txt'>{{item.content}}</text>
+           
           </view>
         </view>
       </block>
-    </scroll-view>
+    </scroll-view> 
 
 
   </view>
 </view>
-<view class='hei' id="hei"></view>
+<!-- <view class='hei' id="hei"></view> -->
 <view class="sendmessage">
   <input type="emoji" bindinput="bindChange" confirm-type="done" value='{{news_input_val}}' placeholder="" />
   <button catchtap="add">发送</button>

@@ -17,8 +17,10 @@ page {
   width: 90rpx;
 }
 .new_imgtent{
-    height: 180rpx;
-  width: 190rpx;
+    height: 60rpx;
+  width: 60rpx; float: left;
+   background: #ffffff; display: inline-block; margin: 0 10px;
+
 }
 .tab .fabu {
   font-size: 33rpx;
@@ -56,9 +58,11 @@ page {
 /* 聊天内容 */
 
 .news {
-  margin-top: 30rpx;
+  margin-top:0rpx;
   text-align: center;
   margin-bottom: 150rpx;
+  display: block; float: left;
+  width: 100%;
 }
 
 .img_null {
@@ -84,20 +88,29 @@ page {
   float: left;
   position: relative;
   left: 5rpx;
+   margin-top: 10px;
 }
 
 .new_img {
-  width: 100rpx;
-  height: 100rpx;
-  border-radius: 50%;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius:2px;
+   background: #ffffff;
 }
 
 .new_txt {
-  width: 380rpx;
-  border-radius: 7px;
-  background-color: #95d4ff;
-  padding: 0rpx 30rpx 0rpx 30rpx;
+  width: auto;
+   display: block;
+    height: auto;
+     float:left;
+   max-width: 60%;
+  border-radius: 8px; text-align: left;
+  background-color: #ffffff;
+  color: #000000;
+  padding: 5px 10px; font-size: 13px; line-height: 18px; 
 }
+
+.you_left .new_txt{ margin-right: 10px;}
 
 .sanjiao {
   top: 20rpx;
@@ -150,7 +163,7 @@ page {
   width: 100%;
   flex-direction: column;
   display: flex;
-  margin-top: 100rpx;
+  margin-top: 5rpx;
   border-top: 0px;
 }
 .hei{
@@ -165,3 +178,5 @@ page {
   line-height: 40px;
   word-break: break-all;
 }
+.you_left .new_imgtent,.you_left .new_txt{ display: block; float: left;}
+.my_right .new_imgtent,.my_right .new_txt{ display: block; float: right;}
