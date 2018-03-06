@@ -47,7 +47,7 @@
                             <view class="weui-cell__ft">跟踪</view>
                         </view>
 
-                        <view class="weui-cell weui-cell2">
+                            <view class="weui-cell weui-cell2">
                                 <view class="weui-cell__bd">成单周期</view>
                                 <view class="weui-cell__ft">2周</view>
                             </view>

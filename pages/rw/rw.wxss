@@ -27,3 +27,38 @@
 .weui-cells:after,.weui-cells:before{border: 0px !important;}
 .index_list .weui-cell__bd{ font-size:30rpx; color: #808080; }
 .index_list .weui-cell__bd text{ font-size:25rpx; margin: 5rpx 0; color: #a1a1a1; width: 100%; display: block; float: left; }
+
+
+.box01_t1{ width: auto; height: auto; display: none; float: left; font-size: 46px; color: #2e78bd; margin: 100rpx 0 0 90rpx;}
+.box01_t1t{ width: 36px; height: 1px; display: block; float: left; margin: 200rpx 0 0 90rpx; border-top: 1px solid #4f4f4f;}
+.box01_t2{ width: auto; height: auto; display: block; float: left; font-size: 20px; color: #676767; margin: 80rpx 90rpx 0 90rpx;}
+.box01_t3{ width: auto; height: auto; display: block; float: left; font-size: 18px; color: #b8b8b8; margin: 20rpx 90rpx 0 90rpx;}
+
+.weblcome_bt {
+  width: 400rpx;
+  height: 96rpx;
+  display: block;
+  float: left;
+  position: fixed;
+  z-index: 10;
+  background: #fff;
+  bottom: 60rpx;
+  color: #000;
+  font-size: 32rpx;
+  line-height: 96rpx;
+  border-radius: 96rpx;
+  border-color: #fff;
+  left: 50%;
+  margin-left: -200rpx;
+}
+.clear{ width:100%; height:1px; display:block; float:left;}
+
+.welcome_box {
+  background: #fff;
+}
+
+.weblcome_box_bt {
+  background: #3286d4;
+  color: #fff;
+}
+

@@ -54,7 +54,7 @@
   <text class="cs_text">你所在的城市？</text>
 
   <image src='../img/dw.png' class='dw_bt'  bindtap="hqcs"></image>
-  <button class="weui-btn hqcs_bt" bindtap="hqcs">获取当前所在城市</button>
+  <button class="weui-btn hqcs_bt" bindtap="hqcs">{{currentCity}}</button>
 
   <button class="weui-btn weblcome_bt weblcome_box_bt" bindtap="goto03">继续</button>
 </view>
@@ -199,7 +199,7 @@
 </view>
 
 
-<view class="welcome welcome_box box09  {{showView09?'show':'hide'}}">
+<!-- <view class="welcome welcome_box box09  {{showView09?'show':'hide'}}">
   <view class="index_top" bindtap="gotorw">
     <image src="../img/bj.jpg" class="index_top_tx"></image>
     <text class="index_top_name">玉兔子</text>
@@ -223,6 +223,6 @@
             </navigator>
     </view>
 
-</view>
+</view> -->
 
 

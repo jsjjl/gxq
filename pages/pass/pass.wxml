@@ -1,10 +1,15 @@
 <view class="welcome">
- <table class="table_box">
+ <view class="table_box">
 
- <tr><td>客户一</td><td>客户一</td><td>客户一</td><td>客户一</td><td>客户一</td></tr>
-<tr><td>客户一</td><td>客户一</td><td>客户一</td><td>客户一</td><td>客户一</td></tr>
-<tr><td>客户一</td><td>客户一</td><td>客户一</td><td>客户一</td><td>客户一</td></tr>
-<tr><td>客户一</td><td>客户一</td><td>客户一</td><td>客户一</td><td>客户一</td></tr>
-<tr><td>客户一</td><td>客户一</td><td>客户一</td><td>客户一</td><td>客户一</td></tr>
- </table>
+<view>
+       <block  wx:for="{{list}}" wx:key="key">
+            <span index="{{index}}" data-id="{{item.id}}">{{item.clientName}}</span>
+           
+      </block>
+</view>
+
+
+
+
+ </view>
 </view>

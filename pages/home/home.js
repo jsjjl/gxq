@@ -2,10 +2,28 @@
 //获取应用实例
 const app = getApp()
 
-const home_config = require('../../config').home_config;
+const updateSalesman = require('../../config').updateSalesman;
 var code; 
 var nickName;
 var avatarUrl;
+
+var authorization,
+    saleName,
+    salePost,
+    saleClass = "", //销售类型
+    saleLevel,
+    saleIndustry,
+    headUrl,
+    birthday = "1990-01-01", //出生日期
+    gender = 2, //姓名
+    phone,
+    city = "", //城市
+    employmentTime,
+    minOrderPrice,
+    maxOrderPrice,
+    fastOrderPrice,
+    longOrderPrice;
+
 Page({
 
       data: {
@@ -20,10 +38,11 @@ Page({
         showView08: false,
         showView09: false,
         radioItems: [
-          {name: '男', value: '男'},
-          {name: '女', value: '女', checked: true}
+          {name: '男', value: '1'},
+          {name: '女', value: '2', checked: true}
         ],
         date: "1990-01-01",
+        currentCity: '获取当前所在城市',
         radioItems_lb: [
           {name: 'B2B', value: 'B2B'},
           {name: 'B2C', value: 'B2C'}
@@ -174,8 +193,11 @@ Page({
 
         })
       },
+
+
       radioChange: function (e) {
-        console.log('radio发生change事件，携带value值为：', e.detail.value);
+        gender = e.detail.value;
+        console.log('性别：', gender);
 
         var radioItems = this.data.radioItems;
         for (var i = 0, len = radioItems.length; i < len; ++i) {
@@ -188,11 +210,19 @@ Page({
       },
       bindDateChange: function (e) {
           this.setData({
-              date: e.detail.value
+              date: e.detail.value,
           })
+          birthday = e.detail.value;
+          console.log('出生日期：', birthday);
+          
+      },
+      hqcs: function(e) {
+        this.getLocation();
+        
       },
       radioChange_lb: function (e) {
-        console.log('radio发生change事件，携带value值为：', e.detail.value);
+        saleClass = e.detail.value;
+        console.log('销售类别：', saleClass);
 
         var radioItems_lb = this.data.radioItems_lb;
         for (var i = 0, len = radioItems_lb.length; i < len; ++i) {
@@ -204,7 +234,8 @@ Page({
         });
       },
       radioChange_hy: function (e) {
-        console.log('radio发生change事件，携带value值为：', e.detail.value);
+        saleIndustry = e.detail.value;
+        console.log('销售行业：', saleIndustry);
 
         var radioItems_hy = this.data.radioItems_hy;
         for (var i = 0, len = radioItems_hy.length; i < len; ++i) {
@@ -216,7 +247,8 @@ Page({
         });
       },
       radioChange_sj: function (e) {
-        console.log('radio发生change事件，携带value值为：', e.detail.value);
+        employmentTime = e.detail.value;
+        console.log('就业时间：', employmentTime);
 
         var radioItems_sj = this.data.radioItems_sj;
         for (var i = 0, len = radioItems_sj.length; i < len; ++i) {
@@ -228,14 +260,17 @@ Page({
         });
       },
       bindAccountChange: function(e) {
-        console.log('picker account 发生选择改变，携带值为', e.detail.value);
+        salePost = this.data.accounts[e.detail.value];
+        console.log('销售岗位：', salePost);
 
         this.setData({
             accountIndex: e.detail.value
         })
       },
       radioChange_zxjr: function (e) {
-        console.log('radio发生change事件，携带value值为：', e.detail.value);
+
+        minOrderPrice = e.detail.value;
+        console.log('最小订单金额：', minOrderPrice);
 
         var radioItems_zxjr = this.data.radioItems_zxjr;
         for (var i = 0, len = radioItems_zxjr.length; i < len; ++i) {
@@ -247,6 +282,10 @@ Page({
         });
       },
       radioChange_zdjr: function (e) {
+
+        maxOrderPrice = e.detail.value;
+        console.log('最大订单金额：', maxOrderPrice);
+
         console.log('radio发生change事件，携带value值为：', e.detail.value);
 
         var radioItems_zdjr = this.data.radioItems_zdjr;
@@ -259,7 +298,9 @@ Page({
         });
       },
       radioChange_zkdd: function (e) {
-        console.log('radio发生change事件，携带value值为：', e.detail.value);
+
+        fastOrderPrice = e.detail.value;
+        console.log('最快订单金额：', fastOrderPrice);
 
         var radioItems_zkdd = this.data.radioItems_zkdd;
         for (var i = 0, len = radioItems_zkdd.length; i < len; ++i) {
@@ -271,7 +312,9 @@ Page({
         });
       },
       radioChange_zcdd: function (e) {
-        console.log('radio发生change事件，携带value值为：', e.detail.value);
+
+        longOrderPrice = e.detail.value;
+        console.log('最长订单金额：', longOrderPrice);
 
         var radioItems_zcdd = this.data.radioItems_zcdd;
         for (var i = 0, len = radioItems_zcdd.length; i < len; ++i) {
@@ -282,37 +325,106 @@ Page({
           radioItems_zcdd: radioItems_zcdd
         });
       },
+
       goto08: function(){
         wx.setNavigationBarColor({
           backgroundColor: '#3286D4',
           frontColor:'#ffffff'
          });
 
+//ajax提交信息
+         wx.request({
+          url: updateSalesman,
+          
+          data: {
+            authorization: authorization,
+            saleName: saleName,
+            salePost: salePost,
+            saleClass: saleClass,
+            saleLevel: saleLevel,
+            saleIndustry: saleIndustry,
+            headUrl: headUrl,
+            birthday: birthday,
+            gender: gender,
+            city: city,
+            employmentTime: employmentTime,
+            minOrderPrice: minOrderPrice,
+            maxOrderPrice: maxOrderPrice,
+            fastOrderPrice: fastOrderPrice,
+            longOrderPrice: longOrderPrice
+          },
+          
+          success:function(res){
+           
+               if(res.data.msg == "成功"){
+              
+                wx.navigateTo({
+                  url: '../rw/rw'
+                })
 
-        var that = this;
-        that.setData({
-            showView08: false,
-            showView09: true,
+               }else{
+                console.log(res.data.msg)
+               }
+                
+
+            },
+            fail:function(res){
+                console.log(res.data.msg)
+          }
         });
-      },
-      gotorw: function() {
-        wx.navigateTo({
-          url: '../rw/rw'
-        })
+       
+
       },
 
       /**
        * 生命周期函数--监听页面加载
        */
       onLoad: function (options) { 
+        authorization = options.wx_id;
+        console.log("接收到的参数是wx_id:", authorization); 
         var that = this;
         //that.getHomeConfigMethod();
 
         //调用应用实例的方法获取全局数据  
         that.getUserInfo();
-        
-
       },
+
+      getLocation: function () {  
+        var page = this  
+        wx.getLocation({  
+          type: 'wgs84',   //<span class="comment" style="margin: 0px; padding: 0px; border: none;">默认为 wgs84 返回 gps 坐标，gcj02 返回可用于 wx.openLocation 的坐标</span><span style="margin: 0px; padding: 0px; border: none;"> </span>  
+          success: function (res) {  
+            // success    
+            var longitude = res.longitude  
+            var latitude = res.latitude  
+            page.loadCity(longitude, latitude)  
+          }  
+        })  
+      },  
+      loadCity: function (longitude, latitude) {  
+        var page = this  
+        wx.request({  
+          url: 'https://api.map.baidu.com/geocoder/v2/?ak=qCRNVGumLaK3e4wyTi6za5UhX99KhjiO&location=' + latitude + ',' + longitude + '&output=json',  
+          data: {},  
+          header: {  
+            'Content-Type': 'application/json'  
+          },  
+          success: function (res) {  
+            // success    
+            console.log(res);  
+            city = res.data.result.addressComponent.city;  
+            page.setData({ currentCity: city });
+            console.log("城市：", city);
+          },  
+          fail: function () {  
+            page.setData({ currentCity: "获取定位失败" });  
+          },  
+            
+        })  
+      },
+      
+      
+
       // getHomeConfigMethod:function(){
       //   var that = this;
       //   wx.request({
@@ -338,29 +450,10 @@ Page({
                 console.log(code);
                 wx.getUserInfo({  
                    success: function (res) {
-                          nickName = res.userInfo.nickName;
-                          avatarUrl = res.userInfo.avatarUrl;
-                          console.log(nickName);
-                          console.log(avatarUrl);
-
-                          wx.request({
-                            url: 'http://101.132.105.206:18080/yj_gxq/WX/loginByWX',
-                            
-                            data: {
-                              code: code,
-                              nickName:nickName,
-                              avatarUrl:avatarUrl
-                            },
-                            
-                            success:function(res){
-                              
-                                  console.log(res.data);
-                              },
-                              fail:function(res){
-                                  console.log(res.data.msg)
-                            }
-                          });
-
+                          saleName = res.userInfo.nickName;
+                          headUrl = res.userInfo.avatarUrl;
+                          console.log(saleName);
+                          console.log(headUrl);
                         }  
                    });
                 

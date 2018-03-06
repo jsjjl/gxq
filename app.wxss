@@ -48,5 +48,5 @@ textarea.fixAndroidKeyboard:focus, input.fixAKeyboard:focus {-webkit-tap-highlig
 html, body {width: 100%;font-family:  "Microsoft Yahei", "微软雅黑","Helvetica Neue", "Hiragino Sans GB", "Segoe UI", Tahoma, Arial, STHeiti, sans-serif;-webkit-text-size-adjust: none; }
 button::after {content: none;}
 
-.hide{display: none;}
-.show{ display: block;}
+.hide{display: none !important;}
+.show{ display: block !important;}

@@ -1,111 +1,124 @@
+var authorization;
+const findSalePayoffList = require('../../config').findSalePayoffList;
+
+
 Page({
   data: {
-        date: "1990-09-01",
-        accounts: ["男", "女"],
-        accountIndex: 0,
-
-        cs: ["北京", "上海"],
-        csIndex: 0,
-
-        lb: ["B2B", "B2C"],
-        lbIndex: 0,
-
-        hy: ["电子产品", "母婴产品"],
-        hyIndex: 0,
-
-        gw: ["销售经理", "销售助理"],
-        gwIndex: 0,
-
-        sj: ["1-2年", "2-3年"],
-        sjIndex: 0,
-
-        zx: ["10万", "30万"],
-        zxIndex: 0,
-
-        zd: ["50万", "100万"],
-        zdIndex: 0,
-
-        zk: ["1个月", "2个月"],
-        zkIndex: 0,
-
-        zc: ["2个月", "3个月"],
-        zcIndex: 0,
+    page: 1,
+    pageSize: 10,
+    hasMoreData: true,
+    contentlist: [],
+    jiazai:true,
+    wu:false
   },
-    bindAccountChange: function(e) {
-        console.log('picker account 发生选择改变，携带值为', e.detail.value);
+  onLoad: function (options) {
+    var that = this;
+    authorization = options.wx_id;
+    console.log("接收到的参数是wx_id:", authorization); 
+    that.getMusicInfo('正在加载数据...')
+   
+  },
+  getMusicInfo: function (message) {
+    var that = this
+ 
 
-        this.setData({
-            accountIndex: e.detail.value
+    wx.request({
+        url: findSalePayoffList,
+        
+        data: {
+            authorization: authorization,
+            pageNum: that.data.page,
+            pageSize: that.data.pageSize
+        },
+        
+
+        
+
+        success:function(res){ 
+            console.log(findSalePayoffList+"?authorization="+authorization+"&pageNum="+that.data.page+"&pageSize="+that.data.pageSize);
+          console.log(res.data.data);
+         
+          console.log(res)
+          var contentlistTem = that.data.contentlist
+          if (res.data.state == 0) {
+            if (that.data.page == 1) {
+              contentlistTem = []
+            }
+            
+            
+            console.log("wer:",res.data.data)
+            
+            var contentlist = res.data.data;
+            
+
+            if (contentlist.length < that.data.pageSize) {
+              that.setData({
+                contentlist: contentlistTem.concat(contentlist),
+                hasMoreData: false
+              })
+            } else {
+              that.setData({
+                contentlist: contentlistTem.concat(contentlist),
+                hasMoreData: true,
+                page: that.data.page + 1
+              })
+            }
+          } else {
+            wx.showToast({
+              title: res.showapi_res_error,
+            })
+          }
+
+
+        },
+          fail:function(res){
+            wx.showToast({
+                title: '加载数据失败',
+              })
+        }
+      });
+       
+
+
+    
+
+  },
+  /**
+ * 页面相关事件处理函数--监听用户下拉动作
+ */
+onPullDownRefresh: function () {
+    this.data.page = 1
+    this.getMusicInfo('正在刷新数据');
+    wx.showToast({
+        icon: 'loading',  //图标，支持"success"、"loading"  
+        title: '正在刷新数据',
+        duration: 2700, 
+    //     image: '../image/img.png',  //自定义图标的本地路径，image 的优先级高于 icon  
+    //   duration: 2000000, //提示的延迟时间，单位毫秒，默认：1500  
+    //   mask: false,  //是否显示透明蒙层，防止触摸穿透，默认：false  
+    //   success: function () { }, //接口调用成功的回调函数  
+    //   fail: function () { },  //接口调用失败的回调函数  
+    //   complete: function () { } //接口调用结束的回调函数  
+
+      })
+},
+
+/**
+ * 页面上拉触底事件的处理函数
+ */
+onReachBottom: function () {
+    if (this.data.hasMoreData) {
+        this.getMusicInfo('加载更多数据')
+      } else {
+          this.setData({
+            jiazai:false,
+          });
+
+        wx.showToast({
+          title: '没有更多数据',
         })
-    },
-    bindDateChange: function (e) {
-        this.setData({
-            date: e.detail.value
-        })
-    },
-    bindcs: function(e) {
-        console.log('picker account 发生选择改变，携带值为', e.detail.value);
-        this.setData({
-            csIndex: e.detail.value
-        })
-    },
-    bindlb: function(e) {
-        console.log('picker account 发生选择改变，携带值为', e.detail.value);
-        this.setData({
-            lbIndex: e.detail.value
-        })
-    },
-    hybind: function(e) {
-        console.log('picker account 发生选择改变，携带值为', e.detail.value);
-        this.setData({
-            hyIndex: e.detail.value
-        })
-    },
-    gwbind: function(e) {
-        console.log('picker account 发生选择改变，携带值为', e.detail.value);
-        this.setData({
-            gwIndex: e.detail.value
-        })
-    },
-    sjbind: function(e) {
-        console.log('picker account 发生选择改变，携带值为', e.detail.value);
-        this.setData({
-            sjIndex: e.detail.value
-        })
-    },
-    zxbind: function(e) {
-        console.log('picker account 发生选择改变，携带值为', e.detail.value);
-        this.setData({
-            zxIndex: e.detail.value
-        })
-    },
-    bind: function(e) {
-        console.log('picker account 发生选择改变，携带值为', e.detail.value);
-        this.setData({
-            Index: e.detail.value
-        })
-    },
-    zdbind: function(e) {
-        console.log('picker account 发生选择改变，携带值为', e.detail.value);
-        this.setData({
-            zdIndex: e.detail.value
-        })
-    },
-    zkbind: function(e) {
-        console.log('picker account 发生选择改变，携带值为', e.detail.value);
-        this.setData({
-            zkIndex: e.detail.value
-        })
-    },
-    zcbind: function(e) {
-        console.log('picker account 发生选择改变，携带值为', e.detail.value);
-        this.setData({
-            zcIndex: e.detail.value
-        })
-    },
-  gotomyedit: function() {
-    wx.navigateTo({
-      url: '../myedit/myedit'
-    })
-  }
+      }
+},
+
+
 })

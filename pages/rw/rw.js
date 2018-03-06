@@ -1,21 +1,31 @@
 const app = getApp();
 
-const home_config = require('../../config').home_config;
+const loginByWX = require('../../config').loginByWX;
+const findSalesmanInfo = require('../../config').findSalesmanInfo;
+const findTaskList = require('../../config').findTaskList;
+
+
 var code; 
 var nickName;
 var avatarUrl;
+var zhuce;
+var wx_id;
+var shengfeng;
+var dengji;
 Page({
   data: {
+    myou: false,
+    you: false,
     sf: '未知',
     dj: 'T0',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    list:[]
   },
   onLoad: function () {
 
     var that = this;
-    //that.getHomeConfigMethod();
 
     //调用应用实例的方法获取全局数据  
     that.getUserInfo();
@@ -45,20 +55,25 @@ Page({
         }
       })
     }
+
+
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  },
+ 
+  //点击进去我的页面
   gotomy: function() {
     wx.navigateTo({
-      url: '../my/my'
+      url: '../my/my?wx_id='+ wx_id + '&nickName=' + nickName + '&avatarUrl=' + avatarUrl +  '&shengfeng=' + shengfeng + '&dengji=' + dengji 
     })
   },
+  
+  //点击进入注册页面
+  zhuce: function() {
+    wx.navigateTo({
+      url: '../home/home?wx_id='+ wx_id
+    })
+  },
+
+//获取用户信息
   getUserInfo:function(){ 
     var that = this;  
 
@@ -75,7 +90,7 @@ Page({
                       console.log(avatarUrl);
 
                       wx.request({
-                        url: 'http://101.132.105.206:18080/yj_gxq/WX/loginByWX',
+                        url: loginByWX,
                         
                         data: {
                           code: code,
@@ -84,8 +99,82 @@ Page({
                         },
                         
                         success:function(res){
-                          
-                              console.log(res.data);
+                              
+                              wx_id = res.data.data.token;
+                              console.log("后台给出的id：" + wx_id);
+                              shengfeng = res.data.data.post;
+                              dengji = res.data.data.level;
+                              that.setData({
+                                         sf: res.data.data.post,
+                                         dj: res.data.data.level
+                              })
+
+                              wx.request({
+                                url: findSalesmanInfo,
+                                
+                                data: {
+                                  authorization: wx_id
+                                },
+                                
+                                success:function(res){
+
+                                     if(res.data["longOrderPrice"] != undefined || res.data.longOrderPrice != null){
+                                     
+                                      that.setData({
+                                        myou: true,
+                                        you: false
+                                      })
+
+                                     }else{
+
+                                      that.setData({
+                                        myou: false,
+                                        you: true,
+                                       
+                                      })
+
+
+                                      wx.request({
+                                        url: findTaskList,
+                                        
+                                        data: {
+                                          authorization: wx_id
+                                        },
+                                        
+                                        success:function(res){ 
+                                          console.log(res.data.data);
+
+                                          var date = res.data.data;
+
+                                          that.setData({
+ 
+                                            　　　　　 list: date
+                                             
+                                          })
+
+                                         
+                                          },
+                                          fail:function(res){
+                                              console.log(res.data.msg)
+                                        }
+                                      });
+
+
+
+
+
+                                     }
+                                      
+        
+                                  },
+                                  fail:function(res){
+                                      console.log(res.data.msg)
+                                }
+                              });
+
+
+
+
                           },
                           fail:function(res){
                               console.log(res.data.msg)
@@ -94,37 +183,23 @@ Page({
 
                     }  
                });
-            
-              
-
         } else {
           console.log('获取用户登录态失败！' + res.errMsg)
         }
       }
     });
 
+  },
+  rwxq: function(e){
+    var $data = e.currentTarget.dataset;
+    console.log($data.id);
+    console.log(wx_id);
+    wx.navigateTo({
+      url: '../rwxq/rwxq?taskId='+ $data.id + "&wx_id=" + wx_id //传参跳转即可
+    })
 
-      // //调用登录接口  
-      // wx.login({  
-      //   success: function () {  
-      //     wx.getUserInfo({  
-      //       success: function (res) {
-      //         nickName = res.userInfo.nickName;
-      //         avatarUrl = res.userInfo.avatarUrl;
-      //         console.log(res.userInfo.code);
-      //         console.log(nickName);
-      //         console.log(avatarUrl);
-      //       }  
-      //     })  
-      //   }  
-      // }); 
-      
-      
-  
-  },  
-  globalData:{  
-    userInfo:null  
-  }
+
+  }  
 
 
 })

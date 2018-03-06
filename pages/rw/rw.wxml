@@ -7,11 +7,26 @@
     <image src="../img/djjt.png" class="index_top_jt" mode="widthFix"></image>
   </view>
 
-    <view class="weui-cells weui-cells_after-title index_list">
-            <navigator url="../rwxq/rwxq" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                <view class="weui-cell__bd">任务一：健身器材高端系列<text>任务时间：2018年1月18号</text></view>
+
+    <view class="{{myou?'show':'hide'}}">
+    <text class="clear"></text>
+    <text class="box01_t1t"></text>
+    <text class="clear"></text>
+    <view class="box01_t2">您还未注册 <span class="clear"></span>任务大厅暂未派发共销任务</view>
+    <text class="box01_t3">回答几个简要问题注册吧！</text>
+    <button class="weui-btn weblcome_bt weblcome_box_bt" bindtap="zhuce">去注册</button>
+    </view>
+
+    <view class="weui-cells weui-cells_after-title index_list {{you?'show':'hide'}}">
+
+      
+  <block wx:for="{{list}}" wx:key="key">
+            <view  index="{{index}}" data-id="{{item.id}}" bindtap="rwxq" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">{{item.taskName}}<text>任务时间：{{item.createDate}}</text></view>
                 <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-            </navigator>
+            </view>
+  </block>
+<!--             
             <navigator url="../rwxq/rwxq" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
                 <view class="weui-cell__bd">任务二：健身器材高端系列<text>任务时间：2018年1月18号</text></view>
                 <view class="weui-cell__ft weui-cell__ft_in-access"></view>
@@ -19,7 +34,7 @@
             <navigator url="../rwxq/rwxq" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
                 <view class="weui-cell__bd">任务三：健身器材高端系列<text>任务时间：2018年1月18号</text></view>
                 <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-            </navigator>
+            </navigator> -->
     </view>
 
 </view>

@@ -1,8 +1,9 @@
 {
   "pages":[
+    "pages/xx/xx",
     "pages/rw/rw",
     "pages/home/home",
-    "pages/xx/xx",
+    
     "pages/khxq/khxq",
     "pages/pass/pass",
     "pages/cpml/cpml",

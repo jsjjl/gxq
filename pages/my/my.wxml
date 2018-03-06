@@ -1,9 +1,9 @@
 <view class="welcome welcome_box box09">
   <view class="index_top" bindtap="gotomy" bindtap="gotomyedit">
-    <image src="../img/bj.jpg" class="index_top_tx"></image>
-    <text class="index_top_name">玉兔子</text>
-    <text class="index_top_sf">身份：销售总监</text>
-    <text class="index_top_dj">等级：T5</text>
+    <image src="{{avatarUrl}}" class="index_top_tx"></image>
+    <text class="index_top_name">{{nickName}}</text>
+    <text class="index_top_sf">身份：{{shengfeng}}</text>
+    <text class="index_top_dj">等级：{{dengji}}</text>
     <image src="../img/tjt.png" class="index_top_jt" mode="widthFix"></image>
   </view>
 
@@ -25,11 +25,11 @@
     </view>
      <text class="my_sp_more">查看更多</text>
 
-     <navigator class="my_title" url="../yj/yj" >
+     <view class="my_title" bindtap="yjbt">
         <image src="../img/yj.png" class="my_title_img"></image>
         <text class="my_title_text">佣金</text>
         <image src="../img/tjt.png" class="tjt"></image>
-    </navigator>
+    </view>
 
 
 </view>

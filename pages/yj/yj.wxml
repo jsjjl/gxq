@@ -1,13 +1,27 @@
 <view class="welcome">
         <view class="weui-cells weui-cells_after-title">
-            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+
+        
+<block  wx:for="{{contentlist}}" wx:key="key">
+        
+
+            <view index="{{index}}" class="weui-cell weui-cell_access" >
+                <view class="weui-cell__bd yj_l">{{item.payType}}<text>{{item.createDate}}</text></view>
+                <view class="weui-cell__ft  yj_r">+{{item.brokerage}}<text>{{item.status}}</text></view>
+            </view></block>
+
+            <!-- <view class="weui-cell weui-cell_access" hover-class="weui-cell_active">
                 <view class="weui-cell__bd yj_l">普通结算<text>2018-02-15 12:00</text></view>
                 <view class="weui-cell__ft  yj_r">+300<text>交易成功</text></view>
-            </navigator>
-            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                <view class="weui-cell__bd yj_l">普通结算<text>2018-02-15 12:00</text></view>
-                <view class="weui-cell__ft  yj_r">+300<text>交易成功</text></view>
-            </navigator>
+            </view> -->
          
+        </view>
+
+        <view class="weui-loadmore {{jiazai?'show':'hide'}}">
+            <view class="weui-loading"></view>
+            <view class="weui-loadmore__tips">正在加载</view>
+        </view>
+        <view class="weui-loadmore weui-loadmore_line {{wu?'show':'hide'}}">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
         </view>
 </view>
