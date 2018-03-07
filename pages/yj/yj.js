@@ -35,39 +35,55 @@ Page({
         
 
         success:function(res){ 
-            console.log(findSalePayoffList+"?authorization="+authorization+"&pageNum="+that.data.page+"&pageSize="+that.data.pageSize);
-          console.log(res.data.data);
+          console.log(findSalePayoffList+"?authorization="+authorization+"&pageNum="+that.data.page+"&pageSize="+that.data.pageSize);
+          console.log("shuju:",res.data.data);
          
-          console.log(res)
-          var contentlistTem = that.data.contentlist
-          if (res.data.state == 0) {
-            if (that.data.page == 1) {
-              contentlistTem = []
-            }
-            
-            
-            console.log("wer:",res.data.data)
-            
-            var contentlist = res.data.data;
-            
+          if(res.data.data == undefined){
 
-            if (contentlist.length < that.data.pageSize) {
-              that.setData({
-                contentlist: contentlistTem.concat(contentlist),
-                hasMoreData: false
-              })
+            that.setData({
+              wu: true,
+              jiazai: false
+            })
+
+          }else{
+
+            console.log(res)
+            var contentlistTem = that.data.contentlist
+            if (res.data.state == 200) {
+              if (that.data.page == 1) {
+                contentlistTem = []
+              }
+              
+              
+              console.log("wer:",res.data.data)
+              
+              var contentlist = res.data.data;
+              
+  
+              if (contentlist.length < that.data.pageSize) {
+                that.setData({
+                  contentlist: contentlistTem.concat(contentlist),
+                  hasMoreData: false
+                })
+              } else {
+                that.setData({
+                  contentlist: contentlistTem.concat(contentlist),
+                  hasMoreData: true,
+                  page: that.data.page + 1
+                })
+              }
             } else {
-              that.setData({
-                contentlist: contentlistTem.concat(contentlist),
-                hasMoreData: true,
-                page: that.data.page + 1
+              wx.showToast({
+                icon: 'loading',
+                title: res.data.msg,
               })
             }
-          } else {
-            wx.showToast({
-              title: res.showapi_res_error,
-            })
+
+
           }
+
+          
+         
 
 
         },
@@ -84,6 +100,7 @@ Page({
 
   },
   /**
+   * 
  * 页面相关事件处理函数--监听用户下拉动作
  */
 onPullDownRefresh: function () {
@@ -93,7 +110,7 @@ onPullDownRefresh: function () {
         icon: 'loading',  //图标，支持"success"、"loading"  
         title: '正在刷新数据',
         duration: 2700, 
-    //     image: '../image/img.png',  //自定义图标的本地路径，image 的优先级高于 icon  
+    //   image: '../image/img.png',  //自定义图标的本地路径，image 的优先级高于 icon  
     //   duration: 2000000, //提示的延迟时间，单位毫秒，默认：1500  
     //   mask: false,  //是否显示透明蒙层，防止触摸穿透，默认：false  
     //   success: function () { }, //接口调用成功的回调函数  

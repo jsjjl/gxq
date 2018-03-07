@@ -1,5 +1,5 @@
-var app = getApp();
-var util = require("../../utils/util.js");
+// var app = getApp();
+// var util = require("../../utils/util.js");
 
 const SendMessage = require('../../config').SendMessage;
 const findMessageList = require('../../config').findMessageList;
@@ -11,6 +11,7 @@ var user = {};
 var length;
 var zx_info_id;
 var openid_talk;
+var authorization;
 Page({
   data: {
     news: '',
@@ -36,12 +37,13 @@ Page({
         url: SendMessage,
         
         data: {
-            authorization: "7CEA7FE925694779AE2C9A15B3B8AA86",
+            authorization: authorization,
             content: message
         },
         
         success:function(res){ 
-                if (res.data.state == 0) {
+          console.log(res.data.state)
+                if (res.data.state == 200) {
                     var a = true;
                     that.loaddata(a);
                     that.setData({
@@ -50,6 +52,7 @@ Page({
                     message = ''
                   } else {
                     wx.showToast({
+                      icon: 'loading',
                       title: res.data.msg,
                     })
                   }
@@ -57,6 +60,7 @@ Page({
           },
           fail:function(res){
               wx.showToast({
+                icon: 'loading',
                title: '网络错误,请稍后再试',
               })
         }
@@ -89,6 +93,11 @@ Page({
   },
 
   onLoad: function (options) {
+
+      
+      authorization = options.wx_id;
+      console.log("接收到的参数是wx_id:", authorization); 
+
     // openid_talk = options.openid_talk;
     // zx_info_id = options.zx_info_id;
     // console.log(openid_talk)
@@ -112,25 +121,29 @@ Page({
         url: findMessageList,
         
         data: {
-            authorization: "7CEA7FE925694779AE2C9A15B3B8AA86",
+            authorization: authorization,
         },
         
         success:function(res){ 
-                if (res.data.state == 0) {
+
+          console.log("聊天列表123:",res.data);
+
+                if (res.data.state == 200) {
                     
 
-                    var date = res.data.data[0].contentVo;
+                    var date = res.data.data.contentVo;
 
                     that.setData({
 
                       　　　　　 centendata: date
                        
                     })
-                    console.log("12323:",date);
+                    console.log("聊天列表:",date);
 
                    
                   } else {
                     wx.showToast({
+                      icon: 'loading',
                       title: res.data.msg,
                     })
                   }
@@ -138,6 +151,7 @@ Page({
           },
           fail:function(res){
               wx.showToast({
+                icon: 'loading',
                title: '网络错误,请稍后再试',
               })
         }

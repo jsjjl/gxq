@@ -22,6 +22,6 @@
             <view class="weui-loadmore__tips">正在加载</view>
         </view>
         <view class="weui-loadmore weui-loadmore_line {{wu?'show':'hide'}}">
-            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无佣金</view>
         </view>
 </view>

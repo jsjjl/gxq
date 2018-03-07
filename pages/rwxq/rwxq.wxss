@@ -86,12 +86,36 @@ margin-bottom:.3rem; padding-bottom:.5rem;
 
 
 .table_box{ width: 100%; margin-bottom: 3.5rem; height: auto;display: block; float: left; margin: 0 0; border-collapse: collapse; overflow: hidden;}
-.table_box tr{ width: 105%; height:3rem;display: block; float: left; line-height: 3rem; border-bottom: 1px solid #eeeeee; text-align: center
+
+.table_box tr, .table_box_tr{ width: 105%; height:3rem;display: block; float: left; line-height: 3rem; border-bottom: 1px solid #eeeeee; text-align: center
   ; color: #777777;}
-.table_box tr td{ width: 19%; height: 3rem;display: block; font-size: .8rem; float: left; line-height: 3rem; border-collapse: collapse; border-left: 1px solid #eeeeee; }
-.table_box tr td:nth-child(1){  border: 0px; }
-.table_box tr:nth-child(1) td{ color: #000000;height: 2rem;line-height: 2rem;}
-.table_box tr:nth-child(1){height: 2rem;line-height: 2rem;}
+
+.table_box tr td, .table_box_td{ width: 19%; height: 3rem;display: block; font-size: .8rem; float: left; line-height: 3rem; border-collapse: collapse; 
+  border-left: 1px solid #eeeeee; }
+
+.table_box tr td:nth-child(1), .table_box_td_f{  border: 0px; }
+.table_box tr:nth-child(1) td,  .table_box_td_f  .table_box_td_d{ color: #000000;height: 2rem;line-height: 2rem;}
+.table_box tr:nth-child(1), .table_box_tr_f{height: 2rem;line-height: 2rem;}
+
 .table_box em{ width:.3rem; height: .3rem; border-radius: .3rem; background: #FF1010; display: inline-block; margin-right:.1rem; }
 
 .pass_bt{ width: 100%; height: 3rem; background: #3286D4; text-align: center; line-height: 3rem; color: #ffffff; font-size: 1rem; position: fixed; left: 0; bottom: 0; z-index: 99;}
+
+
+.kf{ width: 3rem; height: 3rem; display: block; float: left; background: #3286D4; border-radius: 3rem; position: fixed; right: 1rem; bottom: 3.5rem; z-index:9999;}
+.kf_img{ width: 100%; height: 100%; display: block;float: left;}
+
+.table_box_f{width: 105%; height:3rem;display: block; float: left; line-height: 3rem; border-bottom: 1px solid #eeeeee; text-align: center
+  ;  height: 2rem;line-height: 2rem;}
+
+.table_box_f span{width: 19%; height: 2rem;display: block; font-size: 14px; float: left; line-height: 2rem; border-collapse: collapse; 
+    border-left: 1px solid #eeeeee;color: #000000;}
+
+.table_box_c{width: 19%; height: auto;display: block; float: left; line-height: 2rem; border-collapse: collapse; 
+  border-right: 1px solid #eeeeee; color: #777777; margin-bottom: 3rem;}
+
+  
+.table_box_c p {width: 100%; height: 3rem;display: block; font-size: 12px; float: left; line-height: 3rem; border-collapse: collapse; 
+  border-bottom: 1px solid #eeeeee; color: #777777; text-align: center; overflow: hidden;  text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+
+.table_box_ff{width: 105%; height:auto;display: block; float: left; }

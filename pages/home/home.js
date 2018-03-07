@@ -327,10 +327,10 @@ Page({
       },
 
       goto08: function(){
-        wx.setNavigationBarColor({
-          backgroundColor: '#3286D4',
-          frontColor:'#ffffff'
-         });
+        // wx.setNavigationBarColor({
+        //   backgroundColor: '#3286D4',
+        //   frontColor:'#ffffff'
+        //  });
 
 //ajax提交信息
          wx.request({
@@ -356,20 +356,27 @@ Page({
           
           success:function(res){
            
-               if(res.data.msg == "成功"){
+               if(res.data.state == 200){
               
                 wx.navigateTo({
                   url: '../rw/rw'
                 })
 
                }else{
-                console.log(res.data.msg)
+                wx.showToast({
+                  icon: 'loading',
+                  title: res.data.msg,
+                })
+                
                }
                 
 
             },
             fail:function(res){
-                console.log(res.data.msg)
+              wx.showToast({
+                icon: 'loading',
+                title: res.data.msg,
+              })
           }
         });
        

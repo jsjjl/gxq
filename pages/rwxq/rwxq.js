@@ -15,7 +15,18 @@ Page({
         premiumPrice:"",
         averageUnitPrice:"",
         averagePeriod:"",
-        averagePrice:""
+        averagePrice:"",
+        clue:"",
+        order:"",
+        sale:"",
+        tail:"",
+        touch:"",
+        cluelist:[],
+        order:[],
+        sale:[],
+        tail:[],
+        touch:[]
+
     },
     onLoad: function (options) {
         var that = this;
@@ -67,11 +78,22 @@ Page({
                     },
                     
                     success:function(res){ 
-                      console.log("sjs:",res.data.clientInfo);
+                      console.log("crm:",res.data);
+                      that.setData({
+                        clue:res.data.clue.length,
+                        order:res.data.order.length,
+                        sale:res.data.sale.length,
+                        tail:res.data.tail.length,
+                        touch:res.data.touch.length,
+
+                        cluelist:res.data.clue,
+                        orderlist:res.data.order,
+                        salelist:res.data.sale,
+                        taillist:res.data.tail,
+                        touchlist:res.data.touch
+                      })
         
-                       
-        
-                       
+
                       },
                       fail:function(res){
                           console.log(res.data.msg)
@@ -114,6 +136,20 @@ Page({
         wx.navigateTo({
             url: '../pass/pass?taskId='+taskId+"&wx_id="+authorization,
         })
-    }
+    },
+    xxbt: function(){
+        wx.navigateTo({
+            url: '../xx/xx?wx_id='+authorization,
+        })
+    },
+    khxq_bt: function(e){
+      var $data = e.currentTarget.dataset;
+      console.log($data.id);
+      wx.navigateTo({
+        url: '../khxq/khxq?clientId='+ $data.id + "&wx_id=" + authorization //传参跳转即可
+      })
+  
+  
+    }  
     
 });

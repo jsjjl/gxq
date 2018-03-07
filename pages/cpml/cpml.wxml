@@ -2,7 +2,10 @@
  <table class="table_box">
  <tr><td>产品名称</td><td>目录价</td><td>建议成交价</td><td>产品底价</td></tr>
 
-
+<view class="clear"></view>
+   <view class="weui-loadmore weui-loadmore_line {{wu_cpml?'show':'hide'}}">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无数据</view>
+   </view>
 
  <block wx:for="{{list}}" wx:key="key">
 

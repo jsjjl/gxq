@@ -7,7 +7,8 @@ var authorization,
 
 Page({
     data: {
-        list:[]
+        list:[],
+        wu_cpml: false
     },
     onLoad: function (options) {
         var that = this;
@@ -28,9 +29,16 @@ Page({
             
             success:function(res){ 
               console.log(res.data.productList);
-              that.setData({
-                  list:res.data.productList
-              })
+              if(res.data.productList == ""){
+                that.setData({
+                    wu_cpml:true
+                })
+              }else{
+                that.setData({
+                    list:res.data.productList
+                })
+              }
+              
 
               },
               fail:function(res){

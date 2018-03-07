@@ -1,7 +1,7 @@
 .welcome {
   height:auto;
   width: 100%;
-  background:#fafafa;
+  background:#ffffff;
   display: block; float:left;
 }
 

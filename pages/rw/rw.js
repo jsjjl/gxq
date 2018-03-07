@@ -12,10 +12,12 @@ var zhuce;
 var wx_id;
 var shengfeng;
 var dengji;
+var sfzc = 0;
 Page({
   data: {
     myou: false,
     you: false,
+    wu_rw: false,
     sf: '未知',
     dj: 'T0',
     userInfo: {},
@@ -61,9 +63,14 @@ Page({
  
   //点击进去我的页面
   gotomy: function() {
+
+    if(sfzc == 1){
     wx.navigateTo({
       url: '../my/my?wx_id='+ wx_id + '&nickName=' + nickName + '&avatarUrl=' + avatarUrl +  '&shengfeng=' + shengfeng + '&dengji=' + dengji 
     })
+  }
+
+
   },
   
   //点击进入注册页面
@@ -99,7 +106,9 @@ Page({
                         },
                         
                         success:function(res){
-                              
+
+                              console.log("获取id的url：" + loginByWX + '?code=' + code+ '&nickName=' + nickName + '&avatarUrl=' + avatarUrl);
+
                               wx_id = res.data.data.token;
                               console.log("后台给出的id：" + wx_id);
                               shengfeng = res.data.data.post;
@@ -117,20 +126,26 @@ Page({
                                 },
                                 
                                 success:function(res){
+                                  console.log(res.data);
+                                     console.log("是否有数值：",res.data.data.longOrderPrice);
 
-                                     if(res.data["longOrderPrice"] != undefined || res.data.longOrderPrice != null){
-                                     
+                                     if(res.data.data.longOrderPrice == undefined){
+                                      
+
+                                      sfzc = 0;
                                       that.setData({
                                         myou: true,
                                         you: false
                                       })
 
+
+                                      
                                      }else{
 
+                                      sfzc = 1;
                                       that.setData({
                                         myou: false,
                                         you: true,
-                                       
                                       })
 
 
@@ -142,15 +157,27 @@ Page({
                                         },
                                         
                                         success:function(res){ 
-                                          console.log(res.data.data);
+                                          console.log("findTaskList:",res.data.data);
 
                                           var date = res.data.data;
+                                          
+                                          if(res.data.data == undefined){
+                                            that.setData({
+                                              wu_rw: true
+                                            })
+                                            
+                                          }else{
+                                            that.setData({
+                                              　　　　　 list: date
+                                            })
 
-                                          that.setData({
- 
-                                            　　　　　 list: date
-                                             
-                                          })
+                                          }
+
+                                          
+                                          
+
+                                          
+
 
                                          
                                           },
@@ -160,6 +187,7 @@ Page({
                                       });
 
 
+                                    
 
 
 

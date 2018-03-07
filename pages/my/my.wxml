@@ -12,7 +12,12 @@
         <text class="my_title_text">培训视频</text>
         <image src="../img/tjt.png" class="tjt"></image>
     </view>
+    <view class="clear"></view>
+    <view class="weui-loadmore weui-loadmore_line ">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无培训视频</view>
+   </view>
 
+<!-- 
     <view class="my_sp">
         <image src="../img/bj.jpg" class="my_sp_img"></image>
         <image src="../img/play.png" class="my_sp_play"></image>
@@ -23,9 +28,9 @@
         <image src="../img/play.png" class="my_sp_play"></image>
         <text class="my_sp_text">研究消费人群的心理需求</text>
     </view>
-     <text class="my_sp_more">查看更多</text>
+     <text class="my_sp_more">查看更多</text> -->
 
-     <view class="my_title" bindtap="yjbt">
+    <view class="my_title" bindtap="yjbt">
         <image src="../img/yj.png" class="my_title_img"></image>
         <text class="my_title_text">佣金</text>
         <image src="../img/tjt.png" class="tjt"></image>

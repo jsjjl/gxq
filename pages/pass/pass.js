@@ -8,7 +8,8 @@ var authorization,
 
 Page({
     data: {
-        list:[]
+        list:[],
+        wu_pass: false
     },
     onLoad: function (options) {
         var that = this;
@@ -31,9 +32,18 @@ Page({
             
             success:function(res){ 
               console.log(res.data.data);
-              that.setData({
-                  list:res.data.data
-              })
+              if(res.data.data == undefined){
+
+                that.setData({
+                    wu_pass: true
+                })
+
+              }else{
+                that.setData({
+                    list:res.data.data
+                })
+              }
+              
 
               },
               fail:function(res){

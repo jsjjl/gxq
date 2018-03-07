@@ -40,7 +40,12 @@ padding:15px 15px;
 
 .lbiaof{width:46%; margin-right: -1px; text-align: left; border:1px solid #eeeeee;border-top:0px;border-left:0px; height:50px; line-height:25px;color:#aaaaaa; display:block; float:left;font-size:14px; padding: 10px 2%;}
 .lbiaof2{border-right: 0px;}
+
+.lbiaoss span:nth-child(2n){border-right: 0px;}
+
 .lbiaof em{ display: block; float: right; text-align: right;}
+
+.lbiaof i{ }
 
 .weui-cell2{ width: 40%; display: block; float: left; border-bottom: 1px solid #f5f5f5; padding:15px 0; margin:0 15px;}
 .weui-cell2 .weui-cell__bd{ width: 50%;display: block; float: left; }

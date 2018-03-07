@@ -17,7 +17,7 @@
 
                         <view class="weui-cells__title">任务视频</view>
 
-                        <view class="my_sp">
+                        <!-- <view class="my_sp">
                             <image src="../img/bj.jpg" class="my_sp_img"></image>
                             <image src="../img/play.png" class="my_sp_play"></image>
                             <text class="my_sp_text">研究消费人群的心理需求</text>
@@ -26,8 +26,13 @@
                             <image src="../img/bj.jpg" class="my_sp_img"></image>
                             <image src="../img/play.png" class="my_sp_play"></image>
                             <text class="my_sp_text">研究消费人群的心理需求</text>
-                        </view>
+                        </view> -->
 
+                        
+
+   <view class="weui-loadmore weui-loadmore_line">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无任务视频</view>
+   </view>
 
                     <view class="weui-cells weui-cells_after-title">
                         <view class="weui-cell" bindtap="cpml">
@@ -59,49 +64,50 @@
                 </view>
                 
                 <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
-                     <table class="table_box">
-                        <tr> <td >线索(6)</td> <td >触及(8)</td> <td >跟踪(3)</td> <td >成单(6)</td> <td >售后(5)</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                        <tr> <td bindtap="gotokh"><em></em>客户一</td> <td bindtap="gotokh">客户二</td> <td bindtap="gotokh">客户三</td> <td bindtap="gotokh">客户四</td> <td bindtap="gotokh">客户五</td></tr>
-                     </table>
+                     <view class="table_box">
+                        <view  class="table_box_f"> <span >线索({{clue}})</span> <span >触及({{touch}})</span> <span >跟踪({{tail}})</span> <span >成单({{order}})</span> <span >售后({{sale}})</span></view>
+
+
+            <view  class="table_box_ff">
+                        <view  class="table_box_c">
+
+                        <block wx:for="{{cluelist}}" wx:key="key">
+                            <p index="{{index}}" data-id="{{item.id}}" bindtap="khxq_bt">{{item.clientName}}</p>
+                        </block>
+
+                        
+                        </view>
+
+                        <view  class="table_box_c">
+                        <block wx:for="{{touchlist}}" wx:key="key">
+                            <p index="{{index}}" data-id="{{item.id}}" bindtap="khxq_bt">{{item.clientName}}</p>
+                        </block>
+                        </view>
+
+                        <view  class="table_box_c">
+                       <block wx:for="{{taillist}}" wx:key="key">
+                            <p index="{{index}}" data-id="{{item.id}}" bindtap="khxq_bt">{{item.clientName}}</p>
+                        </block>
+                        </view>
+
+                        <view  class="table_box_c">
+                        <block wx:for="{{orderlist}}" wx:key="key">
+                            <p index="{{index}}" data-id="{{item.id}}" bindtap="khxq_bt">{{item.clientName}}</p>
+                        </block>
+                        </view>
+
+                        <view  class="table_box_c">
+                        <block wx:for="{{salelist}}" wx:key="key">
+                            <p index="{{index}}" data-id="{{item.id}}" bindtap="khxq_bt">{{item.clientName}}</p>
+                        </block>
+                        </view>
+
+                        </view>
+
+                       
+                     </view>
+
+                     <view class="kf" bindtap="xxbt"><image src="../img/kf.png" class="kf_img"></image></view>
                      
                      <view bindtap="pass" class="pass_bt">PASS客户</view>
                 </view>
