@@ -353,7 +353,7 @@ Page({
             fastOrderPrice: fastOrderPrice,
             longOrderPrice: longOrderPrice
           },
-          
+          header:{'content-type': 'application/x-www-form-urlencoded;charset=utf-8',},
           success:function(res){
            
                if(res.data.state == 200){
@@ -361,6 +361,7 @@ Page({
                 wx.navigateTo({
                   url: '../rw/rw'
                 })
+
 
                }else{
                 wx.showToast({
@@ -409,7 +410,8 @@ Page({
         })  
       },  
       loadCity: function (longitude, latitude) {  
-        var page = this  
+        var page = this;
+        page.setData({ currentCity: "定位中" });    
         wx.request({  
           url: 'https://api.map.baidu.com/geocoder/v2/?ak=qCRNVGumLaK3e4wyTi6za5UhX99KhjiO&location=' + latitude + ',' + longitude + '&output=json',  
           data: {},  

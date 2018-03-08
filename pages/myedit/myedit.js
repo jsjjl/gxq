@@ -53,10 +53,12 @@ Page({
             url: findSalesmanInfo,
             
             data: {
-                authorization: authorization,
+                 authorization: authorization,
             },
             
             success:function(res){
+
+             if(res.data.state == 200){
                 var grxx =  res.data.data;
                 
                 
@@ -78,12 +80,29 @@ Page({
                     zkIndex:that.data.zk.indexOf(grxx.fastOrderPrice),
                     zcIndex:that.data.zc.indexOf(grxx.longOrderPrice),
 
-                })
+                }) 
+            
+            
+            
+            }else{
+                    wx.showToast({
+                      icon: 'loading',
+                      title: res.data.msg,
+                    })
+                    
+                   }
               
 
               },
               fail:function(res){
-                  console.log(res.data.msg)
+
+
+                   wx.showToast({
+                    icon: 'loading',
+                    title: res.data.msg,
+                  })
+
+                  
             }
           });
            
@@ -228,19 +247,31 @@ Page({
             data:xinxi,
             
             
+            
             success:function(res){
+
+                console.log( updateSalesman + data);
              
                  if(res.data.msg == "成功"){
                 
                   console.log(res.data.msg);
   
                  }else{
+                      wx.showToast({
+                        icon: 'loading',
+                        title: res.data.msg,
+                      });
+
                   console.log(res.data.msg)
                  }
                   
   
               },
               fail:function(res){
+                wx.showToast({
+                    icon: 'loading',
+                    title: res.data.msg,
+                  });
                   console.log(res.data.msg)
             }
           });

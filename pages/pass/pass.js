@@ -31,6 +31,11 @@ Page({
             },
             
             success:function(res){ 
+
+                     
+                if(res.data.state == 200){
+              
+
               console.log(res.data.data);
               if(res.data.data == undefined){
 
@@ -43,6 +48,14 @@ Page({
                     list:res.data.data
                 })
               }
+
+            }else{
+                wx.showToast({
+                  icon: 'loading',
+                  title: res.data.msg,
+                })
+                
+               }
               
 
               },

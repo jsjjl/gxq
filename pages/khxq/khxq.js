@@ -45,6 +45,11 @@ Page({
             },
             
             success:function(res){ 
+
+                if(res.data.state == 200){
+              
+
+
               console.log("data:",res.data.clientInfo);
               
               var lxnr = ["线索","触及","跟踪","成单","售后"];
@@ -67,10 +72,20 @@ Page({
                 qk_salePhone:res.data.clientInfo.clientJoin[0].salePhone,
                 qk_salePost:res.data.clientInfo.clientJoin[0].salePost,
                 qk_saleLevel:res.data.clientInfo.clientJoin[0].saleLevel
-              })
+              })  }else{
+                wx.showToast({
+                  icon: 'loading',
+                  title: res.data.msg,
+                })
+                
+               }
 
               },
               fail:function(res){
+                  wx.showToast({
+                    icon: 'loading',
+                    title: res.data.msg,
+                  });
                   console.log(res.data.msg)
             }
           });

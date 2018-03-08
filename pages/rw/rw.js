@@ -127,7 +127,7 @@ Page({
                                 
                                 success:function(res){
                                   console.log(res.data);
-                                     console.log("是否有数值：",res.data.data.longOrderPrice);
+                                     console.log("是否有数值findSalesmanInfo：",res.data.data.longOrderPrice);
 
                                      if(res.data.data.longOrderPrice == undefined){
                                       
@@ -157,7 +157,7 @@ Page({
                                         },
                                         
                                         success:function(res){ 
-                                          console.log("findTaskList:",res.data.data);
+                                          console.log("是否有任务findTaskList:",res.data.data);
 
                                           var date = res.data.data;
                                           
@@ -174,14 +174,13 @@ Page({
                                           }
 
                                           
-                                          
 
-                                          
-
-
-                                         
                                           },
                                           fail:function(res){
+                                            wx.showToast({
+                                              icon: 'loading',
+                                              title: res.data.msg,
+                                            });
                                               console.log(res.data.msg)
                                         }
                                       });
@@ -196,6 +195,10 @@ Page({
         
                                   },
                                   fail:function(res){
+                                    wx.showToast({
+                                      icon: 'loading',
+                                      title: res.data.msg,
+                                    });
                                       console.log(res.data.msg)
                                 }
                               });
@@ -205,6 +208,10 @@ Page({
 
                           },
                           fail:function(res){
+                            wx.showToast({
+                              icon: 'loading',
+                              title: res.data.msg,
+                            });
                               console.log(res.data.msg)
                         }
                       });

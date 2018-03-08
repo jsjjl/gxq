@@ -32,7 +32,7 @@
       <block wx:else>
         <view class='you_left'>
           <view class='page_row'>
-             <image src='https://yj-jinggai.oss-cn-shanghai.aliyuncs.com/logo/%E5%AE%A2%E6%9C%8D.jpg' class='new_imgtent'></image>
+             <image src='https://pic.fweili.com/kf.jpg' class='new_imgtent'></image>
             <text  class='new_txt'>{{item.content}}</text>
            
           </view>

@@ -28,6 +28,10 @@ Page({
             },
             
             success:function(res){ 
+
+                if(res.data.state == 200){
+               
+                 
               console.log(res.data.productList);
               if(res.data.productList == ""){
                 that.setData({
@@ -38,10 +42,22 @@ Page({
                     list:res.data.productList
                 })
               }
+            }
+              else{
+                wx.showToast({
+                  icon: 'loading',
+                  title: res.data.msg,
+                })
+                
+               }
               
 
               },
               fail:function(res){
+                wx.showToast({
+                    icon: 'loading',
+                    title: res.data.msg,
+                  });
                   console.log(res.data.msg)
             }
           });

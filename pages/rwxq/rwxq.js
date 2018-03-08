@@ -66,6 +66,10 @@ Page({
              
               },
               fail:function(res){
+                wx.showToast({
+                    icon: 'loading',
+                    title: res.data.msg,
+                  });
                   console.log(res.data.msg)
             },complete:function(){
                 wx.request({
@@ -96,6 +100,10 @@ Page({
 
                       },
                       fail:function(res){
+                        wx.showToast({
+                            icon: 'loading',
+                            title: res.data.msg,
+                          });
                           console.log(res.data.msg)
                     }
                   });
