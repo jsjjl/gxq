@@ -60,7 +60,7 @@ page {
 .news {
   margin-top:0rpx;
   text-align: center;
-  margin-bottom: 150rpx;
+  margin-bottom: 250rpx;
   display: block; float: left;
   width: 100%;
 }
@@ -108,6 +108,9 @@ page {
   background-color: #ffffff;
   color: #000000;
   padding: 5px 10px; font-size: 13px; line-height: 18px; 
+
+  display:table;  table-layout:fixed; word-wrap:break-word;
+
 }
 
 .you_left .new_txt{ margin-right: 10px;}
@@ -136,6 +139,7 @@ page {
   bottom: 0rpx;
   display: flex;
   flex-direction: row;
+  border-top: 1px solid #d0d0d0;
 }
 
 .sendmessage input {
@@ -144,7 +148,7 @@ page {
   background-color: white;
   line-height: 40px;
   font-size: 14px;
-  border: 1px solid #d0d0d0;
+  border: 1px solid #ffffff;
   padding-left: 10px;
 }
 
@@ -171,12 +175,16 @@ page {
   height: 20rpx;
 }
 .history {
-  height: 100%;
+  height: auto;
+  width: 100%;
   margin-top: 15px;
   margin: 10px;
   font-size: 14px;
   line-height: 40px;
-  word-break: break-all;
+  display: block; float: left;
 }
 .you_left .new_imgtent,.you_left .new_txt{ display: block; float: left;}
 .my_right .new_imgtent,.my_right .new_txt{ display: block; float: right;}
+
+.kh{ width: 3rem; height: 3rem; display: block; float: left; background: #3286D4; border-radius: 3rem; position: fixed; right: 1rem; bottom: 3.5rem; z-index:9999;}
+.kh_img{ width: 100%; height: 100%; display: block;float: left;}

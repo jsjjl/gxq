@@ -1,4 +1,13 @@
-<view class="welcome welcome_box box09">
+<view class="welcome box00  {{mzhuce?'show':'hide'}}">
+  <image src='../img/bj.jpg' class='welcome_bj' mode="widthFix"></image>
+  <!-- <image src='../img/play.png' class='play_bt' mode="widthFix"></image> -->
+  <button class="weui-btn weblcome_bt " bindtap="goto00">进入圈内</button>
+</view>
+
+
+
+
+<view class="welcome welcome_box box09 {{yzhuce?'show':'hide'}}">
   <view class="index_top" bindtap="gotomy">
     <image src="{{userInfo.avatarUrl}}" class="index_top_tx"></image>
     <text class="index_top_name">{{userInfo.nickName}}</text>
@@ -31,15 +40,7 @@
             <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无任务</view>
    </view>
 
-<!--             
-            <navigator url="../rwxq/rwxq" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                <view class="weui-cell__bd">任务二：健身器材高端系列<text>任务时间：2018年1月18号</text></view>
-                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-            </navigator>
-            <navigator url="../rwxq/rwxq" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                <view class="weui-cell__bd">任务三：健身器材高端系列<text>任务时间：2018年1月18号</text></view>
-                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-            </navigator> -->
+
     </view>
 
 </view>

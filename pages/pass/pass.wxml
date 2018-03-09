@@ -10,7 +10,7 @@
 
 <view>
        <block  wx:for="{{list}}" wx:key="key">
-            <span index="{{index}}" data-id="{{item.id}}">{{item.clientName}}</span>
+            <span index="{{index}}" data-id="{{item.id}}">{{item.clientName}}<em>{{item.passExplain}}</em></span>
            
       </block>
 </view>

@@ -23,7 +23,9 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    list:[]
+    list:[],
+    mzhuce: false,
+    yzhuce: false
   },
   onLoad: function () {
 
@@ -96,11 +98,12 @@ Page({
                       console.log(nickName);
                       console.log(avatarUrl);
 
+
                       wx.request({
                         url: loginByWX,
                         
                         data: {
-                          code: code,
+                          code:code,
                           nickName:nickName,
                           avatarUrl:avatarUrl
                         },
@@ -111,8 +114,24 @@ Page({
 
                               wx_id = res.data.data.token;
                               console.log("后台给出的id：" + wx_id);
+                              console.log("是否注册1注册：" + res.data.data.isRegister);
                               shengfeng = res.data.data.post;
                               dengji = res.data.data.level;
+                              if(res.data.data.isRegister == 0){
+
+                                that.setData({
+                                  mzhuce: true,
+                                  yzhuce: false
+                                })
+                       
+                              }else{
+                                that.setData({
+                                  mzhuce: false,
+                                  yzhuce: true
+                                })
+                                
+                              }
+
                               that.setData({
                                          sf: res.data.data.post,
                                          dj: res.data.data.level
@@ -181,7 +200,7 @@ Page({
                                               icon: 'loading',
                                               title: res.data.msg,
                                             });
-                                              console.log(res.data.msg)
+                                              // console.log(res.data.msg)
                                         }
                                       });
 
@@ -199,7 +218,7 @@ Page({
                                       icon: 'loading',
                                       title: res.data.msg,
                                     });
-                                      console.log(res.data.msg)
+                                      // console.log(res.data.msg)
                                 }
                               });
 
@@ -212,8 +231,11 @@ Page({
                               icon: 'loading',
                               title: res.data.msg,
                             });
-                              console.log(res.data.msg)
+                              // console.log(res.data.msg)
                         }
+
+
+
                       });
 
                     }  
@@ -234,6 +256,12 @@ Page({
     })
 
 
+  },
+  goto00: function(){
+    this.setData({
+      mzhuce: false,
+      yzhuce: true
+    })
   }  
 
 

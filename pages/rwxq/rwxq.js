@@ -70,7 +70,7 @@ Page({
                     icon: 'loading',
                     title: res.data.msg,
                   });
-                  console.log(res.data.msg)
+                  
             },complete:function(){
                 wx.request({
                     url: findTaskDetail,
@@ -104,7 +104,7 @@ Page({
                             icon: 'loading',
                             title: res.data.msg,
                           });
-                          console.log(res.data.msg)
+                         
                     }
                   });
             }
@@ -148,6 +148,14 @@ Page({
     xxbt: function(){
         wx.navigateTo({
             url: '../xx/xx?wx_id='+authorization,
+        })
+    },
+
+    xxkhbt: function(e){
+        var $data = e.currentTarget.dataset;
+        console.log($data.id);
+        wx.navigateTo({
+            url: '../xx/xx?wx_id='+authorization+ "&kh_id=" + $data.id,
         })
     },
     khxq_bt: function(e){

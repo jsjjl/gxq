@@ -6,8 +6,9 @@
 }
 
 .table_box{ width: 100%; overflow: hidden; height: auto;display: block; float: left; margin: 0 0; }
-.table_box view{ width: 105%; height:auto;display: block; float: left; line-height: 3rem; border-bottom: 0px solid #eeeeee; text-align: center
+.table_box view{ width: 100%; height:auto;display: block; float: left; line-height: 3rem; border-bottom: 0px solid #eeeeee; text-align: left
   ; color: #777777;}
-.table_box view span{ width: 16.8%; padding:0 1%; height: 3rem;display: block; float: left; font-size: .8rem; line-height: 3rem; border-left: 1px solid #eeeeee;border-bottom: 1px solid #eeeeee; overflow:hidden;text-overflow:ellipsis; white-space:nowrap; overflow:hidden; }
-.table_box view span:last-child{ border-right: 1px solid #eeeeee; }
+.table_box view span{ width: 96%; padding:0 2%; height: 3rem;display: block; float: left; font-size:14px; line-height: 3rem; border-bottom: 1px solid #eeeeee; overflow:hidden;text-overflow:ellipsis; white-space:nowrap; overflow:hidden; }
+.table_box view span em{width: auto; display: block; float: right;}
+.table_box view span:last-child{ border-bottom: 1px solid #eeeeee; }
 

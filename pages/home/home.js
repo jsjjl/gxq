@@ -9,20 +9,20 @@ var avatarUrl;
 
 var authorization,
     saleName,
-    salePost,
-    saleClass = "", //销售类型
-    saleLevel,
-    saleIndustry,
+    salePost = "销售副总",
+    saleClass = "B2B", //销售类型
+    saleLevel = "", //销售等级
+    saleIndustry = "电子产品", //销售行业
     headUrl,
     birthday = "1990-01-01", //出生日期
     gender = 2, //姓名
-    phone,
+    phone = "", //
     city = "", //城市
-    employmentTime,
-    minOrderPrice,
-    maxOrderPrice,
-    fastOrderPrice,
-    longOrderPrice;
+    employmentTime = "1-2年", //就业时间
+    minOrderPrice = "10万", //最小订单金额
+    maxOrderPrice = "10万", //最大订单金额
+    fastOrderPrice = "一周", //最快订单金额
+    longOrderPrice = "一周";
 
 Page({
 
@@ -44,18 +44,18 @@ Page({
         date: "1990-01-01",
         currentCity: '获取当前所在城市',
         radioItems_lb: [
-          {name: 'B2B', value: 'B2B'},
+          {name: 'B2B', value: 'B2B', checked: true},
           {name: 'B2C', value: 'B2C'}
         ],
         radioItems_hy: [
-          {name: '电子产品', value: '电子产品'},
+          {name: '电子产品', value: '电子产品', checked: true},
           {name: '母婴行业', value: '母婴行业'},
           {name: '女性用品', value: '女性用品'},
           {name: '商品行业', value: '商品行业'},
           {name: '其他', value: '其他'}
         ],
         radioItems_sj: [
-          {name: '1-2年', value: '1-2年'},
+          {name: '1-2年', value: '1-2年', checked: true},
           {name: '2-3年', value: '2-3年'},
           {name: '3-5年', value: '3-5年'},
           {name: '5-6年', value: '5-6年'},
@@ -65,7 +65,7 @@ Page({
         accounts: ["销售总监", "销售副总", "销售助理"],
         accountIndex: 1,
         radioItems_zxjr: [
-          {name: '10万', value: '10万'},
+          {name: '10万', value: '10万', checked: true},
           {name: '15万', value: '15万'},
           {name: '20万', value: '20万'},
           {name: '25万', value: '25万'},
@@ -73,7 +73,7 @@ Page({
           {name: '35万', value: '35万'}
         ],
         radioItems_zdjr: [
-          {name: '10万', value: '10万'},
+          {name: '10万', value: '10万', checked: true},
           {name: '15万', value: '15万'},
           {name: '20万', value: '20万'},
           {name: '25万', value: '25万'},
@@ -81,7 +81,7 @@ Page({
           {name: '35万', value: '35万'}
         ],
         radioItems_zkdd: [
-          {name: '一周', value: '一周'},
+          {name: '一周', value: '一周', checked: true},
           {name: '两周', value: '两周'},
           {name: '一个月', value: '一个月'},
           {name: '二个月', value: '二个月'},
@@ -89,7 +89,7 @@ Page({
           {name: '三月及以上', value: '三月及以上'}
         ],
         radioItems_zcdd: [
-          {name: '一周', value: '一周'},
+          {name: '一周', value: '一周', checked: true},
           {name: '两周', value: '两周'},
           {name: '一个月', value: '一个月'},
           {name: '二个月', value: '二个月'},

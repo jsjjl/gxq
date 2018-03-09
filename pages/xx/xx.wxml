@@ -15,28 +15,35 @@
   <view class="historycon">
 
 
-
+ <view class="clear">  </view>
 
     <scroll-view scroll-y="true" scroll-top="{{scrollTop}}" class="history" wx:for="{{centendata}}" wx:key=''>
 
     
       <block wx:if="{{item.messageType == 1}}">
+        <view class="clear">  </view>
         <view class='my_right'>
           <view class='page_row'>
            <image wx:if='{{item.headUrl}}' src='{{item.headUrl}}' class='new_imgtent'></image>
             <text  class='new_txt'>{{item.content}}</text>
            
           </view>
+           <view class="clear">  </view>
         </view>
+
       </block>
+
       <block wx:else>
+        <view class="clear">  </view>
         <view class='you_left'>
           <view class='page_row'>
              <image src='https://pic.fweili.com/kf.jpg' class='new_imgtent'></image>
             <text  class='new_txt'>{{item.content}}</text>
            
           </view>
+           <view class="clear">  </view>
         </view>
+
       </block>
     </scroll-view> 
 
@@ -45,8 +52,10 @@
 </view>
 <!-- <view class='hei' id="hei"></view> -->
 <view class="sendmessage">
-  <input type="emoji" bindinput="bindChange" confirm-type="done" value='{{news_input_val}}' placeholder="" />
+  <input type="emoji" bindinput="bindChange" confirm-type="done" value='{{news_input_val}}' placeholder="请输入" />
   <button catchtap="add">发送</button>
-  <input style='display:none' type="" bindinput="bindChange" confirm-type="done" placeholder="" />
+  <input style='display:none' type="" bindinput="bindChange" confirm-type="done" placeholder="请输入" />
   <!-- <image bindtap="upimg1" class='jia_img' src='../../../images/jia_img.png'></image> -->
 </view>
+
+<view class="kh {{khbtxs?'show':'hide'}}" bindtap="khbt" ><image src="../img/khxq.png" class="kh_img"></image></view>

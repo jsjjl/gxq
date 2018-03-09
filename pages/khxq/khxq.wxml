@@ -14,8 +14,8 @@
                         <view class="lbiao"><span  class="lbiaot">客户</span><span class="lbiaot lbiaot2">对接</span>
                             <view class="lbiaoss">
 
-                                <span  class="lbiaof"><i class="ell">{{qk_clientName}}</i><em>{{qk_clientPhone}}</em><br/>{{qk_clientPost}}<em>{{qk_clientLevel}}</em></span>
-                                <span  class="lbiaof lbiaof2"><i class="ell">{{qk_saleName}}</i><em>{{qk_salePhone}}</em><br/>{{qk_salePost}}<em>{{qk_saleLevel}}</em></span>
+                                <view  class="lbiaof"><i class="ell">{{qk_clientName}}</i><em>{{qk_clientPhone}}</em><view  class="clear"></view>{{qk_clientPost}}<em>{{qk_clientLevel}}</em></view>
+                                <view  class="lbiaof lbiaof2"><i class="ell">{{qk_saleName}}</i><em>{{qk_salePhone}}</em><view  class="clear"></view>{{qk_salePost}}<em>{{qk_saleLevel}}</em></view>
 
                             </view>
                         </view>

@@ -2,6 +2,7 @@
 <view class="page">
     <view class="page__bd">
         <view class="weui-tab">
+        
             <view class="weui-navbar">
                 <block wx:for="{{tabs}}" wx:key="*this">
                     <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
@@ -10,6 +11,9 @@
                 </block>
                 <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
             </view>
+
+
+
             <view class="weui-tab__panel">
                 <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
 
@@ -30,9 +34,9 @@
 
                         
 
-   <view class="weui-loadmore weui-loadmore_line">
-            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无任务视频</view>
-   </view>
+                    <view class="weui-loadmore weui-loadmore_line">
+                                <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无任务视频</view>
+                    </view>
 
                     <view class="weui-cells weui-cells_after-title">
                         <view class="weui-cell" bindtap="cpml">
@@ -41,78 +45,120 @@
                         </view>
                         <view class="weui-cell">
                             <view class="weui-cell__bd">底价佣金</view>
-                            <view class="weui-cell__ft">{{basePrice}}%</view>
+                            <view class="weui-cell__ft">{{basePrice}}</view>
                         </view>
                         <view class="weui-cell">
                             <view class="weui-cell__bd">溢价佣金</view>
-                            <view class="weui-cell__ft">{{premiumPrice}}%</view>
+                            <view class="weui-cell__ft">{{premiumPrice}}</view>
                         </view>
                         <view class="weui-cell">
                             <view class="weui-cell__bd">平均客单价</view>
-                            <view class="weui-cell__ft">{{averageUnitPrice}}万</view>
+                            <view class="weui-cell__ft">{{averageUnitPrice}}</view>
                         </view>
                         <view class="weui-cell">
                             <view class="weui-cell__bd">平均开单周期</view>
-                            <view class="weui-cell__ft">{{averagePeriod}}天</view>
+                            <view class="weui-cell__ft">{{averagePeriod}}</view>
                         </view>
                         <view class="weui-cell">
                             <view class="weui-cell__bd">平均佣金</view>
-                            <view class="weui-cell__ft">{{averagePrice}}万/单</view>
+                            <view class="weui-cell__ft">{{averagePrice}}</view>
                         </view>
                         
                     </view>
                 </view>
                 
+
                 <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
                      <view class="table_box">
-                        <view  class="table_box_f"> <span >线索({{clue}})</span> <span >触及({{touch}})</span> <span >跟踪({{tail}})</span> <span >成单({{order}})</span> <span >售后({{sale}})</span></view>
 
 
-            <view  class="table_box_ff">
-                        <view  class="table_box_c">
 
-                        <block wx:for="{{cluelist}}" wx:key="key">
-                            <p index="{{index}}" data-id="{{item.id}}" bindtap="khxq_bt">{{item.clientName}}</p>
-                        </block>
+                        <view  class="table_box_f"> <span calss="bl">线索({{clue}})</span> <span >触及({{touch}})</span> <span >跟踪({{tail}})</span> <span >成单({{order}})</span> <span >售后({{sale}})</span></view>
 
-                        
-                        </view>
 
-                        <view  class="table_box_c">
-                        <block wx:for="{{touchlist}}" wx:key="key">
-                            <p index="{{index}}" data-id="{{item.id}}" bindtap="khxq_bt">{{item.clientName}}</p>
-                        </block>
-                        </view>
+            
+            
+            
+            
+                             <view  class="table_box_ff">
 
-                        <view  class="table_box_c">
-                       <block wx:for="{{taillist}}" wx:key="key">
-                            <p index="{{index}}" data-id="{{item.id}}" bindtap="khxq_bt">{{item.clientName}}</p>
-                        </block>
-                        </view>
 
-                        <view  class="table_box_c">
-                        <block wx:for="{{orderlist}}" wx:key="key">
-                            <p index="{{index}}" data-id="{{item.id}}" bindtap="khxq_bt">{{item.clientName}}</p>
-                        </block>
-                        </view>
+                                                <view  class="table_box_c">
 
-                        <view  class="table_box_c">
-                        <block wx:for="{{salelist}}" wx:key="key">
-                            <p index="{{index}}" data-id="{{item.id}}" bindtap="khxq_bt">{{item.clientName}}</p>
-                        </block>
-                        </view>
+                                                <block wx:for="{{cluelist}}" wx:key="key">
+                                                    <p index="{{index}}" data-id="{{item.id}}" bindtap="khxq_bt" class="bl">{{item.clientName}}</p>
+                                                </block>
 
-                        </view>
+                                                
+                                                </view>
+
+                                                <view  class="table_box_c">
+                                                <block wx:for="{{touchlist}}" wx:key="key">
+                                                    <p index="{{index}}" data-id="{{item.id}}" bindtap="xxkhbt">{{item.clientName}}</p>
+                                                </block>
+                                                </view>
+
+                                                <view  class="table_box_c">
+                                            <block wx:for="{{taillist}}" wx:key="key">
+                                                    <p index="{{index}}" data-id="{{item.id}}" bindtap="xxkhbt">{{item.clientName}}</p>
+                                                </block>
+                                                </view>
+
+                                                <view  class="table_box_c">
+                                                <block wx:for="{{orderlist}}" wx:key="key">
+                                                    <p index="{{index}}" data-id="{{item.id}}" bindtap="xxkhbt">{{item.clientName}}</p>
+                                                </block>
+                                                </view>
+
+                                                <view  class="table_box_c">
+                                                <block wx:for="{{salelist}}" wx:key="key">
+                                                    <p index="{{index}}" data-id="{{item.id}}" bindtap="xxkhbt">{{item.clientName}}</p>
+                                                </block>
+                                                </view>
+
+                                  </view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                        
+                    
+                    
+                    
+                    
                      </view>
 
-                     <view class="kf" bindtap="xxbt"><image src="../img/kf.png" class="kf_img"></image></view>
                      
-                     <view bindtap="pass" class="pass_bt">PASS客户</view>
+                     
+                    
+
+
                 </view>
+
+
+
             </view>
+
+
         </view>
     </view>
 </view>
 </view>
+
+ <view bindtap="pass" class="pass_bt" hidden="{{activeIndex != 1}}">PASS客户</view>
+ <view class="kf" bindtap="xxbt" hidden="{{activeIndex != 1}}"><image src="../img/kf.png" class="kf_img"></image></view>

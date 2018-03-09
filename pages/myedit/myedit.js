@@ -23,7 +23,7 @@ Page({
         hy: ["电子产品", "母婴产品","女性用品","商品行业","其他"],
         hyIndex: 0,
 
-        gw: ["销售总监","销售经理", "销售助理"],
+        gw: ["销售总监", "销售副总", "销售助理"],
         gwIndex: 0,
 
         sj: ["1-2年", "2-3年","3-5年","5-6年","6-8年","10年及以上"],
@@ -250,7 +250,7 @@ Page({
             
             success:function(res){
 
-                console.log( updateSalesman + data);
+                
              
                  if(res.data.msg == "成功"){
                 

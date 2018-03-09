@@ -12,6 +12,7 @@ var length;
 var zx_info_id;
 var openid_talk;
 var authorization;
+var khid;
 Page({
   data: {
     news: '',
@@ -22,7 +23,8 @@ Page({
     nickName: '',
     avatarUrl: '',
     news_input_val:'',
-    tabdata: ''
+    tabdata: '',
+    khbtxs: false
   },
   bindChange: function (e) {
     message = e.detail.value
@@ -96,6 +98,12 @@ Page({
 
       
       authorization = options.wx_id;
+      if(options.kh_id){
+        this.setData({
+          khbtxs:true
+        })
+        khid = options.kh_id;
+      }
       console.log("接收到的参数是wx_id:", authorization); 
 
     // openid_talk = options.openid_talk;
@@ -229,5 +237,12 @@ Page({
 //     })
 //   }
 
+khbt: function(e){
+      wx.navigateTo({
+        url: '../khxq/khxq?clientId='+ khid + "&wx_id=" + authorization //传参跳转即可
+      })
+  
+  
+    } 
 
 })

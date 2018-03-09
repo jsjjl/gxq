@@ -9,7 +9,7 @@
 
  <block wx:for="{{list}}" wx:key="key">
 
-      <tr index="{{index}}" data-id="{{item.id}}"><td>{{item.productName}}</td><td>{{item.listPrice}}万</td><td>{{item.recommendPrice}}万</td><td>{{item.productBasePrice}}万</td></tr>
+      <tr index="{{index}}" data-id="{{item.id}}"><td>{{item.productName}}</td><td>{{item.listPrice}}</td><td>{{item.recommendPrice}}</td><td>{{item.productBasePrice}}</td></tr>
 
           
   </block>

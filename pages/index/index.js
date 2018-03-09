@@ -1,0 +1,17 @@
+//index.js
+//获取应用实例
+const app = getApp()
+
+
+Page({
+
+      data: {
+      },
+      goto00: function () {
+        wx.navigateTo({
+          url: '../rw/rw'
+        })
+
+      }
+ })
+

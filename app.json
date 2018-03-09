@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/rw/rw",
+    "pages/index/index",
     "pages/home/home",
     "pages/xx/xx",
     "pages/khxq/khxq",

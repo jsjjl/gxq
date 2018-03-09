@@ -53,7 +53,7 @@
                     <view class="weui-label">城市</view>
                 </view>
                  <view class="weui-cell__bd">
-                    <input class="weui-input myedit_list_right" placeholder="" value="{{city}}" bindinput="csInput"/>
+                    <input class="weui-input myedit_list_right" placeholder="点击设置" value="{{city}}" bindinput="csInput"/>
                 </view>
             </view>
 
