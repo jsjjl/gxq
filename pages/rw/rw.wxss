@@ -14,7 +14,16 @@
   height: auto;
 }
 
-
+.play_bt {
+  width: 20%;
+  height: auto;
+  display: block;
+  position: fixed;
+  z-index: 9;
+  top: 40%;
+  left: 40%;
+  float: left;
+}
 
 .index_top{ width: 100%; height: auto; display: block; float: left; background: #3286d4; margin-bottom: 30rpx;}
 .index_top_tx{ width: 140rpx; height: 140rpx; border-radius: 10rpx; display: block; float: left; margin: 40rpx;}

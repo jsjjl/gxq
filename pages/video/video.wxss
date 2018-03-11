@@ -1,0 +1,10 @@
+.welcome,page {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background: #000;
+}
+video{ width: 100%; top:50%; margin-top: -170px;}

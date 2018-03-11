@@ -11,7 +11,8 @@
     "pages/ptjs/ptjs",
     "pages/yj/yj",
     "pages/myedit/myedit", 
-    "pages/my/my"
+    "pages/my/my",
+    "pages/video/video"
   ],
   "window":{
     "backgroundTextStyle":"light",

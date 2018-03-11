@@ -110,11 +110,14 @@ Page({
                         
                         success:function(res){
 
+                          if(res.data.state == 200){
+
                               console.log("获取id的url：" + loginByWX + '?code=' + code+ '&nickName=' + nickName + '&avatarUrl=' + avatarUrl);
 
                               wx_id = res.data.data.token;
                               console.log("后台给出的id：" + wx_id);
                               console.log("是否注册1注册：" + res.data.data.isRegister);
+                              console.log( res.data.data);
                               shengfeng = res.data.data.post;
                               dengji = res.data.data.level;
                               if(res.data.data.isRegister == 0){
@@ -145,6 +148,9 @@ Page({
                                 },
                                 
                                 success:function(res){
+
+                                  if(res.data.state == 200){
+
                                   console.log(res.data);
                                      console.log("是否有数值findSalesmanInfo：",res.data.data.longOrderPrice);
 
@@ -176,6 +182,8 @@ Page({
                                         },
                                         
                                         success:function(res){ 
+                                          if(res.data.state == 200){
+                                          
                                           console.log("是否有任务findTaskList:",res.data.data);
 
                                           var date = res.data.data;
@@ -191,7 +199,12 @@ Page({
                                             })
 
                                           }
-
+                                        }else{
+                                          wx.showToast({
+                                            icon: 'loading',
+                                            title: res.data.msg,
+                                          });
+                                        }
                                           
 
                                           },
@@ -210,6 +223,12 @@ Page({
 
 
                                      }
+                                    }else{
+                                      wx.showToast({
+                                        icon: 'loading',
+                                        title: res.data.msg,
+                                      });
+                                     }
                                       
         
                                   },
@@ -223,7 +242,12 @@ Page({
                               });
 
 
-
+                            }else{
+                              wx.showToast({
+                                icon: 'loading',
+                                title: res.data.msg,
+                              });
+                            }
 
                           },
                           fail:function(res){
@@ -262,7 +286,12 @@ Page({
       mzhuce: false,
       yzhuce: true
     })
-  }  
+  },
+  gotoplay: function() {
+    wx.navigateTo({
+      url: '../video/video'
+    })
+  } 
 
 
 })

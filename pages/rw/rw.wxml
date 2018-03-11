@@ -1,7 +1,10 @@
 <view class="welcome box00  {{mzhuce?'show':'hide'}}">
+
+
+
   <image src='../img/bj.jpg' class='welcome_bj' mode="widthFix"></image>
-  <!-- <image src='../img/play.png' class='play_bt' mode="widthFix"></image> -->
-  <button class="weui-btn weblcome_bt " bindtap="goto00">进入圈内</button>
+  <image src='../img/play.png' class='play_bt' mode="widthFix" bindtap="gotoplay"></image>
+  <button class="weui-btn weblcome_bt " bindtap="goto00">入圈</button>
 </view>
 
 
