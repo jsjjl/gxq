@@ -28,5 +28,10 @@ Page({
     wx.navigateTo({
       url: '../yj/yj?wx_id=' + authorization
     })
-  }
+  },
+  gotoplay: function() {
+    wx.navigateTo({
+      url: '../video/video'
+    })
+  } 
 })

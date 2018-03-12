@@ -13,16 +13,16 @@
         <image src="../img/tjt.png" class="tjt"></image>
     </view>
     <view class="clear"></view>
-    <view class="weui-loadmore weui-loadmore_line ">
+    <!-- <view class="weui-loadmore weui-loadmore_line ">
             <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无培训视频</view>
-   </view>
+   </view> -->
 
-<!-- 
-    <view class="my_sp">
-        <image src="../img/bj.jpg" class="my_sp_img"></image>
+
+    <view class="my_sp" bindtap="gotoplay">
+        <image src="https://pic.fweili.com/welcome.png" class="my_sp_img"  mode="widthFix"></image>
         <image src="../img/play.png" class="my_sp_play"></image>
-        <text class="my_sp_text">研究消费人群的心理需求</text>
-    </view>
+        <text class="my_sp_text">共销圈简介</text>
+    </view><!-- 
      <view class="my_sp">
         <image src="../img/bj.jpg" class="my_sp_img"></image>
         <image src="../img/play.png" class="my_sp_play"></image>

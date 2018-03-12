@@ -23,8 +23,8 @@
 .my_title_img{ width:40rpx; height:40rpx; margin:20rpx; display:block;float:left;}
 .my_title_text{ width:auto; height:40rpx; margin:20rpx 0; line-height:40rpx; font-size:26rpx; display:block;float:left;color: #3286d4; }
 
-.my_sp{width:80%; height:180rpx; overflow:hidden; margin:5rpx 10%; display:block;float:left; position:relative; background: #ffffff; }
-.my_sp_img{width:100%; height:100%;display:block;float:left; position:absolute; z-index:1;}
+.my_sp{width:80%; height:auto;min-height:180rpx; overflow:hidden; margin:5rpx 10%; display:block;float:left; position:relative; background: #ffffff; }
+.my_sp_img{width:100%; height:auto;display:block;float:left; position:relative; z-index:1;}
 .my_sp_play{width:70rpx; height:70rpx;display:block;float:left; position:absolute; z-index:2; top:18%; left:50%; margin-left:-35rpx;}
 .my_sp_text{width:80%; height:auto;display:block;float:left; position:absolute; z-index:3; bottom:10%; left:10%; font-size:26rpx; color:#ffffff;    text-align: center;}
 
