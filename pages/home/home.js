@@ -9,20 +9,20 @@ var avatarUrl;
 
 var authorization,
     saleName,
-    salePost = "销售副总",
-    saleClass = "B2B", //销售类型
+    salePost = "总经理",
+    saleClass = "政府客户", //销售类型
     saleLevel = "", //销售等级
-    saleIndustry = "电子产品", //销售行业
+    saleIndustry = "软件系统", //销售行业
     headUrl,
     birthday = "1990-01-01", //出生日期
     gender = 2, //姓名
     phone = "", //
     city = "", //城市
-    employmentTime = "1-2年", //就业时间
-    minOrderPrice = "10万", //最小订单金额
-    maxOrderPrice = "10万", //最大订单金额
+    employmentTime = "半年以内", //就业时间
+    minOrderPrice = "1万以下", //最小订单金额
+    maxOrderPrice = "10万以下", //最大订单金额
     fastOrderPrice = "一周", //最快订单金额
-    longOrderPrice = "一周";
+    longOrderPrice = "一个月";
 
 Page({
 
@@ -44,57 +44,58 @@ Page({
         date: "1990-01-01",
         currentCity: '获取当前所在城市',
         radioItems_lb: [
-          {name: 'B2B', value: 'B2B', checked: true},
-          {name: 'B2C', value: 'B2C'}
+          {name: '政府客户', value: '政府客户', checked: true},
+          {name: '企业客户', value: '企业客户'},
+          {name: '个人客户', value: '个人客户'}
         ],
         radioItems_hy: [
-          {name: '电子产品', value: '电子产品', checked: true},
-          {name: '母婴行业', value: '母婴行业'},
-          {name: '女性用品', value: '女性用品'},
-          {name: '商品行业', value: '商品行业'},
+          {name: '软件系统', value: '软件系统', checked: true},
+          {name: '电子设备', value: '电子设备'},
+          {name: '工程类', value: '工程类'},
+          {name: '服务类', value: '服务类'},
           {name: '其他', value: '其他'}
         ],
         radioItems_sj: [
-          {name: '1-2年', value: '1-2年', checked: true},
+          {name: '半年以内', value: '半年以内', checked: true},
+          {name: '1年', value: '1年'},
           {name: '2-3年', value: '2-3年'},
-          {name: '3-5年', value: '3-5年'},
-          {name: '5-6年', value: '5-6年'},
-          {name: '6-8年', value: '6-8年'},
-          {name: '10年及以上', value: '10年及以上'}
+          {name: '4-5年', value: '4-5年'},
+          {name: '6-9年', value: '6-9年'},
+          {name: '10年以上', value: '10年以上'}
         ],
-        accounts: ["销售总监", "销售副总", "销售助理"],
-        accountIndex: 1,
+        accounts: ["总经理", "销售副总", "销售总监", "销售经理", "销售助理", "技术支持"],
+        accountIndex: 0,
         radioItems_zxjr: [
-          {name: '10万', value: '10万', checked: true},
-          {name: '15万', value: '15万'},
-          {name: '20万', value: '20万'},
-          {name: '25万', value: '25万'},
-          {name: '30万', value: '30万'},
-          {name: '35万', value: '35万'}
+          {name: '1万以下', value: '1万以下', checked: true},
+          {name: '1-5万', value: '1-5万'},
+          {name: '6-10万', value: '6-10万'},
+          {name: '11-20万', value: '11-20万'},
+          {name: '21-30万', value: '21-30万'},
+          {name: '30万以上', value: '30万以上'}
         ],
         radioItems_zdjr: [
-          {name: '10万', value: '10万', checked: true},
-          {name: '15万', value: '15万'},
-          {name: '20万', value: '20万'},
-          {name: '25万', value: '25万'},
-          {name: '30万', value: '30万'},
-          {name: '35万', value: '35万'}
+          {name: '10万以下', value: '10万以下', checked: true},
+          {name: '11-30万', value: '11-30万'},
+          {name: '31-50万', value: '31-50万'},
+          {name: '51-100万', value: '51-100万'},
+          {name: '101-200万', value: '101-200万'},
+          {name: '200万以上', value: '200万以上'}
         ],
         radioItems_zkdd: [
           {name: '一周', value: '一周', checked: true},
-          {name: '两周', value: '两周'},
+          {name: '半个月', value: '半个月'},
           {name: '一个月', value: '一个月'},
-          {name: '二个月', value: '二个月'},
           {name: '三个月', value: '三个月'},
-          {name: '三月及以上', value: '三月及以上'}
+          {name: '半年', value: '半年'},
+          {name: '一年及以上', value: '一年及以上'}
         ],
         radioItems_zcdd: [
-          {name: '一周', value: '一周', checked: true},
-          {name: '两周', value: '两周'},
-          {name: '一个月', value: '一个月'},
-          {name: '二个月', value: '二个月'},
+          {name: '一个月', value: '一个月', checked: true},
           {name: '三个月', value: '三个月'},
-          {name: '三月及以上', value: '三月及以上'}
+          {name: '半年', value: '半年'},
+          {name: '一年', value: '一年'},
+          {name: '两年', value: '两年'},
+          {name: '两年及以上', value: '两年及以上'}
         ],
       },
       goto00: function () {

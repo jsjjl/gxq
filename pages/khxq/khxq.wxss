@@ -45,7 +45,7 @@ padding:15px 15px;
 
 .lbiaof em{ display: block; float: right; text-align: right;}
 
-.lbiaof i{ }
+.lbiaof i{ width: 40%; display: block; float: left;}
 
 .weui-cell2{ width: 40%; display: block; float: left; border-bottom: 1px solid #f5f5f5; padding:15px 0; margin:0 15px;}
 .weui-cell2 .weui-cell__bd{ width: 50%;display: block; float: left; }

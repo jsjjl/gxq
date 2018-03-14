@@ -62,7 +62,7 @@
 
 <view class="welcome welcome_box box04  {{showView04?'show':'hide'}}">
   <image src='../img/fh.png' class='fh_bt' mode="widthFix" bindtap="fh_goto04"></image>
-  <text class="box02_t3">你的销售类别是？</text>
+  <text class="box02_t3">你销售的客户类型？</text>
   <text class="box02_t4 box03_t4">此数据仅作为调查，共销圈会帮你保密的</text>
 
     <view class="box03_xb">
@@ -103,7 +103,7 @@
 
 <view class="welcome welcome_box box06  {{showView06?'show':'hide'}}">
  <image src='../img/fh.png' class='fh_bt' mode="widthFix" bindtap="fh_goto06"></image>
-  <text class="box02_t1 box06_t1">你的所在的销售岗位是？</text>
+  <text class="box02_t1 box06_t1">你销售的职位是？</text>
   <text class="box02_t2 box06_t2">此数据仅作为调查，共销圈会帮你保密的</text>
 
       <view class="box06_gw">
@@ -115,7 +115,7 @@
       </view>
     
     
-  <text class="box02_t3">你的所从业的时间是？</text>
+  <text class="box02_t3">你做销售的从业时间是？</text>
   <text class="box02_t4">此数据仅作为调查，共销圈会帮你保密的</text>
      <view class="box02_xb box06_xb">
        <radio-group bindchange="radioChange_sj">
@@ -136,7 +136,7 @@
 
 <view class="welcome welcome_box box07  {{showView07?'show':'hide'}}">
  <image src='../img/fh.png' class='fh_bt' mode="widthFix" bindtap="fh_goto07"></image>
-  <text class="box02_t1 box06_t1">最小订单金额是？</text>
+  <text class="box02_t1 box06_t1">你的最小订单金额是？</text>
   <text class="box02_t2 box06_t2">此数据仅作为调查，共销圈会帮你保密的</text>
      <view class="box02_xb box06_xb">
        <radio-group bindchange="radioChange_zxjr">
@@ -150,7 +150,7 @@
     </view>
 
     
-  <text class="box02_t3">最大订单金额是？</text>
+  <text class="box02_t3">你的最大订单金额是？</text>
   <text class="box02_t4">此数据仅作为调查，共销圈会帮你保密的</text>
      <view class="box02_xb box06_xb">
        <radio-group bindchange="radioChange_zdjr">
@@ -169,7 +169,7 @@
 
 <view class="welcome welcome_box box08  {{showView08?'show':'hide'}}">
  <image src='../img/fh.png' class='fh_bt' mode="widthFix" bindtap="fh_goto08"></image>
-  <text class="box02_t1 box06_t1">最快订单周期是？</text>
+  <text class="box02_t1 box06_t1">你最块的开单周期是？</text>
   <text class="box02_t2 box06_t2">此数据仅作为调查，共销圈会帮你保密的</text>
      <view class="box02_xb box06_xb">
        <radio-group bindchange="radioChange_zkdd">
@@ -183,7 +183,7 @@
     </view>
 
     
-  <text class="box02_t3">最长订单周期是？</text>
+  <text class="box02_t3">你最慢的开单周期是？</text>
   <text class="box02_t4">此数据仅作为调查，共销圈会帮你保密的</text>
      <view class="box02_xb box06_xb">
        <radio-group bindchange="radioChange_zcdd">
