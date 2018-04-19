@@ -30,7 +30,10 @@ var config = {
   //消息列表
   findMessageList: `${host}/findMessageList`,
   //客户详情接口
-  findClientDetail: `${host}/findClientDetail`,  
+  findClientDetail: `${host}/findClientDetail`,
+  //消息列表
+  findMessageTitle: `${host}/findMessageTitle`,
+    
 
   
   

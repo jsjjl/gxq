@@ -73,7 +73,18 @@
 
 
 
-                        <view  class="table_box_f"> <span calss="bl">线索({{clue}})</span> <span >触及({{touch}})</span> <span >跟踪({{tail}})</span> <span >成单({{order}})</span> <span >售后({{sale}})</span></view>
+                        <view  class="table_box_f">
+                        <span calss="bl">线索({{clue}})</span>
+                            <!-- <span data-id="{{touch_id}}" bindtap="khxq_bt3">触及({{touch}})<em class="{{touch_unread!=0?'show':'hide'}}"></em></span>
+                            <span data-id="{{tail_id}}" bindtap="khxq_bt3">跟踪({{tail}})<em class="{{tail_unread!=0?'show':'hide'}}"></em></span>
+                            <span data-id="{{order_id}}" bindtap="khxq_bt3">成单({{order}})<em class="{{order_unread!=0?'show':'hide'}}"></em></span>
+                            <span data-id="{{sale_id}}" bindtap="khxq_bt3">售后({{sale}})<em class="{{sale_unread!=0?'show':'hide'}}"></em></span> -->
+
+                             <span data-id="{{touch_id}}" >触及({{touch}})</span>
+                            <span data-id="{{tail_id}}" >跟踪({{tail}})</span>
+                            <span data-id="{{order_id}}">成单({{order}})</span>
+                            <span data-id="{{sale_id}}" >售后({{sale}})</span>
+                        </view>
 
 
             
@@ -81,7 +92,6 @@
             
             
                              <view  class="table_box_ff">
-
 
                                                 <view  class="table_box_c">
 
@@ -91,28 +101,27 @@
 
                                                 
                                                 </view>
-
-                                                <view  class="table_box_c">
+   <view  class="table_box_c">
                                                 <block wx:for="{{touchlist}}" wx:key="key">
-                                                    <p index="{{index}}" data-id="{{item.id}}" bindtap="xxkhbt">{{item.clientName}}</p>
+                                                    <p index="{{index}}" data-id="{{item.groupId}}" bindtap="xxkhbt2">{{item.clientName}}<em class="{{item.unread!=0?'show':'hide'}}"></em></p>
                                                 </block>
                                                 </view>
 
                                                 <view  class="table_box_c">
-                                            <block wx:for="{{taillist}}" wx:key="key">
-                                                    <p index="{{index}}" data-id="{{item.id}}" bindtap="xxkhbt">{{item.clientName}}</p>
+                                                <block wx:for="{{taillist}}" wx:key="key">
+                                                    <p index="{{index}}" data-id="{{item.groupId}}" bindtap="xxkhbt2">{{item.clientName}}<em class="{{item.unread!=0?'show':'hide'}}"></em></p>
                                                 </block>
                                                 </view>
 
                                                 <view  class="table_box_c">
                                                 <block wx:for="{{orderlist}}" wx:key="key">
-                                                    <p index="{{index}}" data-id="{{item.id}}" bindtap="xxkhbt">{{item.clientName}}</p>
+                                                    <p index="{{index}}" data-id="{{item.groupId}}" bindtap="xxkhbt2">{{item.clientName}}<em class="{{item.unread!=0?'show':'hide'}}"></em></p>
                                                 </block>
                                                 </view>
 
                                                 <view  class="table_box_c">
                                                 <block wx:for="{{salelist}}" wx:key="key">
-                                                    <p index="{{index}}" data-id="{{item.id}}" bindtap="xxkhbt">{{item.clientName}}</p>
+                                                    <p index="{{index}}" data-id="{{item.groupId}}" bindtap="xxkhbt2">{{item.clientName}}<em class="{{item.unread!=0?'show':'hide'}}"></em></p>
                                                 </block>
                                                 </view>
 
@@ -121,25 +130,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                       
-                    
-                    
-                    
                     
                      </view>
 

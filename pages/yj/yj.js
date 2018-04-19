@@ -63,7 +63,8 @@ Page({
               if (contentlist.length < that.data.pageSize) {
                 that.setData({
                   contentlist: contentlistTem.concat(contentlist),
-                  hasMoreData: false
+                  hasMoreData: false,
+                  jiazai: false
                 })
               } else {
                 that.setData({

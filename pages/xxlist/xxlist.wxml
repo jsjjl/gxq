@@ -1,0 +1,42 @@
+<view class="welcome">
+
+
+ <view class="weui-panel__bd">
+                <view class="weui-media-box weui-media-box_small-appmsg">
+                    <view class="weui-cells weui-cells_in-small-appmsg">
+
+                  
+                    <view class="weui-cells weui-cells_after-title">
+                         <block  wx:for="{{contentlist}}" wx:key="key">
+                                    <view  index="{{index}}" data-id="{{item.id}}" bindtap="khxq_bt"  class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+
+                                         <view class="weui-cell__hd"><i class="yxx {{item.unread!=0?'have':''}}"></i></view>
+                                        <p class="xw">{{item.title}}<em>{{item.createDate}}</em><span >{{item.content}}
+                                        </span></p>
+                                    </view>
+                        </block>
+                    </view>
+                      <view class="weui-loadmore {{jiazai?'show':'hide'}}">
+            <view class="weui-loading"></view>
+            <view class="weui-loadmore__tips">正在加载</view>
+        </view>
+        <view class="weui-loadmore weui-loadmore_line {{wu?'show':'hide'}}">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无消息</view>
+        </view>
+                        <!-- <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                            <view class="weui-cell__hd"><image src="../img/xx.png" style="width: 20px;height: 20px;margin-right: 5px" /></view>
+                            <p class="xw">共销圈优秀员发布<em>2018-01-25 12:25</em><span >共销圈优秀员发布共销圈优秀员发布共销圈优秀员发布共销圈优秀员发布
+                            </span></p>
+                        </navigator>
+                        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                            <view class="weui-cell__hd"><image src="../img/xx_y.png" style="width: 20px;height: 20px;margin-right: 5px" /></view>
+                            <p class="xw">共销圈优秀员发布<em>2018-01-25 12:25</em><span >共销圈优秀员发布共销圈优秀员发布共销圈优秀员发布共销圈优秀员发布
+                            </span></p>
+                        </navigator> -->
+                    </view>
+                </view>
+            </view>
+
+
+
+</view>

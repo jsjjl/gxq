@@ -17,7 +17,7 @@
 
  <view class="clear">  </view>
 
-    <scroll-view scroll-y="true" scroll-top="{{scrollTop}}" class="history" wx:for="{{centendata}}" wx:key=''>
+    <view class="history" wx:for="{{centendata}}" wx:key=''>
 
     
       <block wx:if="{{item.messageType == 1}}">
@@ -29,28 +29,33 @@
            
           </view>
            <view class="clear">  </view>
-        </view>
+        </view> <view class="clear">  </view>
 
       </block>
 
+      
       <block wx:else>
         <view class="clear">  </view>
         <view class='you_left'>
           <view class='page_row'>
-             <image src='https://pic.fweili.com/kf.jpg' class='new_imgtent'></image>
+             <image src='{{item.headUrl}}' class='new_imgtent'></image>
             <text  class='new_txt'>{{item.content}}</text>
            
           </view>
            <view class="clear">  </view>
         </view>
 
-      </block>
-    </scroll-view> 
+      </block> <view class="clear">  </view>
+    </view> 
 
 
-  </view>
+  </view> <view class="clear">  </view>
 </view>
-<!-- <view class='hei' id="hei"></view> -->
+
+
+ <view class="clear">  </view>
+
+<view class='hei' id="hei"></view>
 <view class="sendmessage">
   <input type="emoji" bindinput="bindChange" confirm-type="done" value='{{news_input_val}}' placeholder="请输入" />
   <button catchtap="add">发送</button>
